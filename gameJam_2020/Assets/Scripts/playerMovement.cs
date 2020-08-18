@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour
     // To prevent the player sprite from moving on its own at the start 
     private bool noMove = false;
     
-    //public Animator animator;
+    public Animator animator;
 
     private bool faceRight = true;
 
@@ -36,19 +36,7 @@ public class playerMovement : MonoBehaviour
 
         // animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime ));
 
-        // //Flip the character
-        // if(move < 0 && faceRight){
-        //     flip();
-        // }else if(move > 0 && !faceRight){
-        //     flip();
-        // }
-
         // Getting the coordinates of the mousePosition in game
-
-        // float step = moveSpeed * Time.deltaTime;
-        // transform.position = Vector2.MoveTowards(transform.position, target, step);
-        // Debug.Log(target);
-        
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         if(Input.GetMouseButtonDown(0)){
@@ -56,9 +44,6 @@ public class playerMovement : MonoBehaviour
             // If target.x's sign != transform.x then flip
             // This doesn't work
             float direction = target.x - transform.position.x;
-            Debug.Log("Target: " + target.x);
-            Debug.Log("CurrentPos: " + transform.position.x);
-            Debug.Log("Direction: " + (target.x - transform.position.x));
 
             if(faceRight && target.x < transform.position.x){
                 flip();
@@ -70,9 +55,9 @@ public class playerMovement : MonoBehaviour
 
         if(noMove == true){
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * moveSpeed);
+            float direction = target.x - transform.position.x;
+            animator.SetFloat("Horizontal", Mathf.Abs(direction * moveSpeed * Time.deltaTime ));
         }
-
-        //animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime ));
 
        
 
