@@ -53,24 +53,28 @@ public class playerMovement : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0)){
             target = new Vector2(mousePos.x, transform.position.y);
+            // If target.x's sign != transform.x then flip
+            // This doesn't work
+            float direction = target.x - transform.position.x;
+            Debug.Log("Target: " + target.x);
+            Debug.Log("CurrentPos: " + transform.position.x);
+            Debug.Log("Direction: " + (target.x - transform.position.x));
+
+            if(faceRight && target.x < transform.position.x){
+                flip();
+            }else if(!faceRight && target.x > transform.position.x){
+                flip();
+            }
             noMove = true;
         }
 
         if(noMove == true){
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * moveSpeed);
         }
-        //transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * moveSpeed);
 
         //animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime ));
 
-        // if(target != null){
-        //     if(Mathf.Sign(transform.position.x) != Mathf.Sign(target.x)){
-        //         Debug.Log("Target is in the opposite direction");
-        //         flip();
-        //     }else{
-        //         Debug.Log("Target is in the same direction");
-        //     }
-        // }
+       
 
         
     }
@@ -79,23 +83,6 @@ public class playerMovement : MonoBehaviour
         faceRight = !faceRight;
         transform.Rotate(0f, 180f, 0f);
     }
-
-    // void OnGUI(){
-    //     Event currentEvent = Event.current;
-    //     Vector2 mousePos = new Vector2();
-    //     Vector2 point = new Vector2();
-
-    //     // compute where the mouse is in world space
-    //     mousePos.x = currentEvent.mousePosition.x;
-    //     mousePos.y = cam.pixelHeight - currentEvent.mousePosition.y;
-    //     point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 0.0f));
-
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //         // set the target to the mouse click location
-    //         target = point;
-    //     }
-    // }
 
     
 }
