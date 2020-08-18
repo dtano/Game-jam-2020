@@ -12,12 +12,14 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
 
     private Queue<string> sentences;
-
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        
         
     }
 
@@ -49,6 +51,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
     }
 
+    //Go through text one letter at a time
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
@@ -63,6 +66,7 @@ public class DialogueManager : MonoBehaviour
     {
         
         animator.SetBool("IsOpen", false);
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
     
     }
 
