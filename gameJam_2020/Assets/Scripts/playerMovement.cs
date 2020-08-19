@@ -74,5 +74,10 @@ public class playerMovement : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
+    public void stop(){
+        animator.SetFloat("Horizontal", 0);
+        target = new Vector2(transform.position.x, transform.position.y);
+    }
+
     
 }
