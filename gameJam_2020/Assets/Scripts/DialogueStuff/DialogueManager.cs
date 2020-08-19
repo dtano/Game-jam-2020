@@ -25,10 +25,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        
+        Debug.Log("Text box started");
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
         animator.SetBool("IsOpen", true);
-        //GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
-        
         nameText.text = dialogue.name;
         sentences.Clear();
 
@@ -69,13 +68,9 @@ public class DialogueManager : MonoBehaviour
     {
         
         animator.SetBool("IsOpen", false);
-        Debug.Log("Coroutine is now finished");
-        //GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
-        
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
     
     }
 
     
 }
-
-    
