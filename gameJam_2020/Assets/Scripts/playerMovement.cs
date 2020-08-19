@@ -88,7 +88,37 @@ public class playerMovement : MonoBehaviour
 
         
     }
+    /*Doesn't work 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "LeftWall"){
+            Debug.Log("Collision");
+        }
+    }
+    */
 
+    /* Create raycast to check whether there is wall in front of player
+    currently set to left side wall only
+    void FixedUpdate()
+    {
+        //Length of the ray
+        float laserLength = 1f;
+    
+        int layerMask = LayerMask.GetMask("Default");
+        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, laserLength, layerMask);
+ 
+        
+        if (hit.collider != null)
+        {
+            
+            Debug.Log("Hitting: " + hit.collider.tag);
+        }
+ 
+        Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.red);
+    }
+    */
+    
     void flip(){
         faceRight = !faceRight;
         transform.Rotate(0f, 180f, 0f);
