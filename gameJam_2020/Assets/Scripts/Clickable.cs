@@ -27,7 +27,6 @@ public class Clickable : MonoBehaviour
 
     IEnumerator MoveToObject(Transform target){
         while(Mathf.Abs(transform.position.x - target.position.x) > 0.5f){
-            Debug.Log("Player not there yet");
             yield return null;
         }
 

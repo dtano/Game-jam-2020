@@ -3,7 +3,7 @@
      
     public class Trigger : MonoBehaviour {
      
-        public Dialogue dialogue;
+        //public Dialogue dialogue;
         void OnMouseDown()
         {
             

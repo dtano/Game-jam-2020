@@ -77,6 +77,7 @@ public class playerMovement : MonoBehaviour
     public void stop(){
         animator.SetFloat("Horizontal", 0);
         target = new Vector2(transform.position.x, transform.position.y);
+        enabled = false;
     }
 
     

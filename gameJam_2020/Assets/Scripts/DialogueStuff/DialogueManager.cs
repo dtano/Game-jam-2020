@@ -27,8 +27,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Text box started");
 
+        
         GameObject.Find("Player").GetComponent<playerMovement>().stop();
-        GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
         
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
