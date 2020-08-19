@@ -59,6 +59,11 @@ public class playerMovement : MonoBehaviour
             animator.SetFloat("Horizontal", Mathf.Abs(direction * moveSpeed * Time.deltaTime ));
         }
 
+        // A rather hacky solution
+        // The player is placed in a player layer and the furniture is placed in a furniture layer
+        // This will ignore collisions between these 2 layers
+        Physics2D.IgnoreLayerCollision(8,9);
+
        
 
         

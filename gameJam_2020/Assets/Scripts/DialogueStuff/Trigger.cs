@@ -8,6 +8,7 @@
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             //GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
+            Debug.Log("Object pressed");
         }
 
         public Dialogue dialogue;
