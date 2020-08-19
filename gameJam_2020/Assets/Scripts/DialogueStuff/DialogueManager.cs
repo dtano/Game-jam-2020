@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
         GameObject.Find("Player").GetComponent<playerMovement>().stop();
         
         animator.SetBool("IsOpen", true);
+        Debug.Log("Animator is set to true");
         nameText.text = dialogue.name;
         sentences.Clear();
 

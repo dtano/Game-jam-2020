@@ -35,6 +35,7 @@ public class Clickable : MonoBehaviour
         //GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
         
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        Debug.Log("Dialogue started");
     
         
         Debug.Log("Coroutine is now finished");
