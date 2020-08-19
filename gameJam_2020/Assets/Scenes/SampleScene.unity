@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100839368}
   - component: {fileID: 100839369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Board-filled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.6220613, b: 0.5844607, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -368,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269530187}
   - component: {fileID: 269530188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610405396}
   - component: {fileID: 610405395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wooden_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1104,7 +1104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697936773}
   - component: {fileID: 697936772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Letter_face_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4944,7 +4944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825933821}
   - component: {fileID: 825933820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pancake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5391,7 +5391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070699868}
   - component: {fileID: 1070699867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5553,7 +5553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1257274661}
   - component: {fileID: 1257274660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Office_chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5883,7 +5883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341750472}
   - component: {fileID: 1341750471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Recorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6045,7 +6045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517129676}
   - component: {fileID: 1517129675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Office_desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6346,7 +6346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749517650}
   - component: {fileID: 1749517651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Small_Cupboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6427,7 +6427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792628909}
   - component: {fileID: 1792628908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FishTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
