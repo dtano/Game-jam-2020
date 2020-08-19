@@ -11,6 +11,8 @@ public class playerMovement : MonoBehaviour
     
     public Animator animator;
 
+    private Rigidbody2D body;
+
     private bool faceRight = true;
 
     private Vector2 target;
@@ -22,7 +24,7 @@ public class playerMovement : MonoBehaviour
     {
         // target = new Vector2(0.0f, 0.0f);
         // position = gameObject.transform.position;
-
+        body = GetComponent<Rigidbody2D>();
         // cam = Camera.main;
     }
 
@@ -55,9 +57,27 @@ public class playerMovement : MonoBehaviour
 
         if(noMove == true){
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * moveSpeed);
+            //body.MovePosition(new Vector2(target.x * moveSpeed * Time.deltaTime,
+            //transform.position.y));
             float direction = target.x - transform.position.x;
             animator.SetFloat("Horizontal", Mathf.Abs(direction * moveSpeed * Time.deltaTime ));
         }
+
+        // Vector3 tmpPos = Camera.main.WorldToScreenPoint (transform.position);
+        // if(tmpPos.x > Screen.width){
+        //     Vector3 position = transform.position;
+        //     //position.x = 12;
+        //     //transform.position = position;
+        //     Debug.Log("Player has reached the end");
+        // }
+
+        
+
+        // float horzExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
+        // Camera cam = Camera.main;
+        // float boundWidth = cam.orthographicSize;
+        //Debug.Log(horzExtent);
+        //Debug.Log(boundWidth);
 
         // A rather hacky solution
         // The player is placed in a player layer and the furniture is placed in a furniture layer
