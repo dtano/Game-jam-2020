@@ -9,12 +9,18 @@ public class Clickable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(MoveToObject(Player.transform));
+        //Debug.Log("Coroutine start");
+        //StartCoroutine(MoveToObject(Player.transform));
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void initCoroutine(){
+        Debug.Log("Coroutine start");
+        StartCoroutine(MoveToObject(Player.transform));
     }
 
     IEnumerator MoveToObject(Transform target){
@@ -24,9 +30,15 @@ public class Clickable : MonoBehaviour
         }
 
         Debug.Log("Reached the target");
-
+        // Trigger the dialogue and freeze the player
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
+        
         yield return new WaitForSeconds(3f);
+        
         Debug.Log("Coroutine is now finished");
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
+        
+        // Disables the coroutine
         enabled = false;
 
 
