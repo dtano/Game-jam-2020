@@ -4,28 +4,35 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    // The player thats being followed
     public Transform target;
-    private float horzExtent;
-    public float speed = 1 ;
     
-    private Vector3 destination;
-    private Vector3 projection;
+    // The limit before the camera moves right
+    private float horzExtent;
+    public float speed = 2 ;
+    
+    //private Vector3 destination;
 
+    // The x position of the camera
     private float cameraX;
+    
+    // The x position that the camera should go to
     private Vector3 dest;
     
-    
-    
     private Vector3 originalPosition;
+    
+    // Stops the camera from moving
     private bool stopMove = false;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         horzExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
-        destination = transform.position;
+        
         originalPosition = transform.position;
 
-        projection = target.position;
+        
         cameraX = transform.position.x;
         dest = transform.position;
 
@@ -35,9 +42,8 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        projection = Vector3.MoveTowards(projection, target.position, Time.deltaTime * speed);
         
-
+        // Case when the player has walked past the camera's right bounds
         if(target.position.x > horzExtent && !stopMove){
             cameraX += speed * Time.deltaTime;
             if(cameraX > originalPosition.x + 4){
@@ -49,15 +55,20 @@ public class CameraController : MonoBehaviour
             //transform.position = dest;
         }
 
+        // Case when the player wants to go back
+        if(stopMove && target.position.x < horzExtent){
+            cameraX -= speed * Time.deltaTime;
+            if(cameraX <= originalPosition.x){
+                Debug.Log("Camera moving back");
+                stopMove = false;
+            }
+        }
+
+
+
         dest.x = cameraX;
         transform.position = dest;
 
-        // if((target.position - projection).magnitude > horzExtent){
-            
-        //     projection = Vector3.MoveTowards(projection, target.position, Time.deltaTime * speed);
-        //     destination = projection;
-        //     transform.position = destination;
-        // }
-    
+        
     }
 }
