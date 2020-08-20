@@ -16,13 +16,15 @@ public class ItemDragManager : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
 
     public void OnDrag(PointerEventData eventData)
-    {
+    {   
+        GameObject.Find("Player").GetComponent<playerMovement>().stop();
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.position = originalPosition;
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
     }
     // Start is called before the first frame update
     void Start()
