@@ -6,7 +6,7 @@ public class PickUp : MonoBehaviour
 {
     public Dialogue dialogue;
     private Inventory inventory;
-    //public GameObject Item;
+    
     public Sprite inventorySprite;
     // Start is called before the first frame update
     void Start()
@@ -31,8 +31,13 @@ public class PickUp : MonoBehaviour
 
         // Add the item to the inventory here
         Debug.Log("Item added to inventory");
+        
         // 1. Loop through the inventory to find an empty slot
-
+        for(int i = 0; i < inventory.slots.Length; i++){
+            if(inventory.isFull[i] == false){
+                inventory.isFull[i] = true;
+            }
+        }
         // 2. Then somehow assign the inventorySprite to the slot's ItemImage
 
         // 3. Once that is done, PickUp must be deactivated and the normal trigger is activated
