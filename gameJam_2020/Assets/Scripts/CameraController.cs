@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
     {
         
         // Case when the player has walked past the camera's right bounds
-        if(target.position.x > horzExtent && !stopMove){
+        if(target.position.x > horzExtent + 1 && !stopMove){
             cameraX += speed * Time.deltaTime;
             if(cameraX > originalPosition.x + 4){
                 Debug.Log("Camera should stop");

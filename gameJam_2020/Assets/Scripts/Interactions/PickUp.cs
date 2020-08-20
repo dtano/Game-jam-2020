@@ -38,16 +38,15 @@ public class PickUp : MonoBehaviour
         //Debug.Log("Item added to inventory");
         
         // 1. Loop through the inventory to find an empty slot
-        for(int i = 0; i < inventory.slots.Length; i++){
-            if(inventory.isFull[i] == false){
+        for(int j = 0; j < invSpr.Length; j++){
+             for(int i = 0; i < inventory.slots.Length; i++){
+                if(inventory.isFull[i] == false){
                 Debug.Log("New item added");
                 inventory.isFull[i] = true;
                 //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
                 //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
+                inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
 
-                for(int j = 0; j < invSpr.Length; j++){
-                    inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
-                }
                 //inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
                 Debug.Log(i);
                 break;
@@ -55,8 +54,30 @@ public class PickUp : MonoBehaviour
                 
                 // Add the sprite to the inventory
                 
+                }
             }
         }
+        // for(int i = 0; i < inventory.slots.Length; i++){
+        //     if(inventory.isFull[i] == false){
+        //         Debug.Log("New item added");
+        //         inventory.isFull[i] = true;
+        //         //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
+        //         //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
+
+
+
+        //         for(int j = 0; j < invSpr.Length; j++){
+        //             inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
+        //         }
+        //         //inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
+        //         Debug.Log(i);
+        //         break;
+                
+                
+        //         // Add the sprite to the inventory
+                
+        //     }
+        // }
         // 2. Then somehow assign the inventorySprite to the slot's ItemImage
 
         // 3. Once that is done, PickUp must be deactivated and the normal trigger is activated
