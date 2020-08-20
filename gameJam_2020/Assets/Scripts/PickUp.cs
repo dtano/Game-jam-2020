@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
@@ -36,7 +37,10 @@ public class PickUp : MonoBehaviour
         for(int i = 0; i < inventory.slots.Length; i++){
             if(inventory.isFull[i] == false){
                 inventory.isFull[i] = true;
-                inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
+                //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
+                //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
+
+                inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
                 
                 
                 // Add the sprite to the inventory
@@ -50,8 +54,12 @@ public class PickUp : MonoBehaviour
         Debug.Log("Coroutine is now finished");
         StopCoroutine(AddToInventory(target));
         
-        // This will cause the object to dissapear
+        
         // For the desk and fish tank, we need to modify this script
+        // Deactivates the hover text associated with this object
+        gameObject.GetComponent<HoverOver>().hoverOver.SetActive(false);
+        
+        // This will cause the object to dissapear
         gameObject.SetActive(false);
 
     }

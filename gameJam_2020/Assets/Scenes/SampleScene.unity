@@ -6041,7 +6041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1219547031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6134,6 +6134,7 @@ GameObject:
   - component: {fileID: 1229382044}
   - component: {fileID: 1229382046}
   - component: {fileID: 1229382045}
+  - component: {fileID: 1229382047}
   m_Layer: 5
   m_Name: ItemSlot0
   m_TagString: Untagged
@@ -6198,6 +6199,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229382043}
   m_CullTransparentMesh: 0
+--- !u!114 &1229382047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229382043}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed69781c433634469c9d92e8c30e9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventorySprite: {fileID: 0}
 --- !u!1 &1244835481
 GameObject:
   m_ObjectHideFlags: 0
