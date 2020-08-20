@@ -17,6 +17,7 @@ public class CameraController : MonoBehaviour
     
     
     private Vector3 originalPosition;
+    private bool stopMove = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,13 +36,14 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         projection = Vector3.MoveTowards(projection, target.position, Time.deltaTime * speed);
-        // cameraX += speed * Time.deltaTime;
         
-        // dest.x = cameraX;
-        // transform.position = dest;
 
-        if(target.position.x > horzExtent){
+        if(target.position.x > horzExtent && !stopMove){
             cameraX += speed * Time.deltaTime;
+            if(cameraX > originalPosition.x + 4){
+                Debug.Log("Camera should stop");
+                stopMove = true;
+            }
         
             //dest.x = cameraX;
             //transform.position = dest;
