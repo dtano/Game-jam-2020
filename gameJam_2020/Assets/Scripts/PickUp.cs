@@ -36,6 +36,11 @@ public class PickUp : MonoBehaviour
         for(int i = 0; i < inventory.slots.Length; i++){
             if(inventory.isFull[i] == false){
                 inventory.isFull[i] = true;
+                inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
+                
+                
+                // Add the sprite to the inventory
+                
             }
         }
         // 2. Then somehow assign the inventorySprite to the slot's ItemImage
