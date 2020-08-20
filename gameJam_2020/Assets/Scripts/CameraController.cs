@@ -35,8 +35,18 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         projection = Vector3.MoveTowards(projection, target.position, Time.deltaTime * speed);
-        cameraX += speed * Time.deltaTime;
+        // cameraX += speed * Time.deltaTime;
         
+        // dest.x = cameraX;
+        // transform.position = dest;
+
+        if(target.position.x > horzExtent){
+            cameraX += speed * Time.deltaTime;
+        
+            //dest.x = cameraX;
+            //transform.position = dest;
+        }
+
         dest.x = cameraX;
         transform.position = dest;
 
