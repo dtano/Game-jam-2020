@@ -40,7 +40,7 @@
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             Debug.Log("Dialogue started");
     
-        
+            
             Debug.Log("Coroutine is now finished");
             //GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
         
