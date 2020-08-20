@@ -2,6 +2,10 @@
     using System.Collections;
      
     public class Trigger : MonoBehaviour {
+
+        private int num;
+
+        public bool active;
      
         public Dialogue dialogue;
         void OnMouseDown()
@@ -13,12 +17,15 @@
             
             //this.GetComponent<Clickable>().initCoroutine();
 
-            Transform transform = GameObject.Find("Player").transform;
-            StopAllCoroutines();
-            StartCoroutine(MoveToObject(transform));
+            if(active){
+                Transform transform = GameObject.Find("Player").transform;
+                StopAllCoroutines();
+                StartCoroutine(MoveToObject(transform));
             
             
-            Debug.Log("Object pressed");
+                Debug.Log("Object pressed");
+            }
+            
         }
 
         /*

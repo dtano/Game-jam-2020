@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
 {
     public Dialogue dialogue;
     private Inventory inventory;
+    public bool active = true;
     
     public Sprite inventorySprite;
     // Start is called before the first frame update
@@ -17,9 +18,11 @@ public class PickUp : MonoBehaviour
     }
 
     void OnMouseDown(){
+        if(active){
             Transform transform = GameObject.Find("Player").transform;
             StopAllCoroutines();
             StartCoroutine(AddToInventory(transform));
+        }
     }
 
     IEnumerator AddToInventory(Transform target){
@@ -57,13 +60,23 @@ public class PickUp : MonoBehaviour
         //Debug.Log("Coroutine is now finished");
         StopCoroutine(AddToInventory(target));
         
+        if(gameObject.tag == "Removeable"){
+            // Deactivates the hover text associated with this object
+            gameObject.GetComponent<HoverOver>().hoverOver.SetActive(false);
         
-        // For the desk and fish tank, we need to modify this script
-        // Deactivates the hover text associated with this object
-        gameObject.GetComponent<HoverOver>().hoverOver.SetActive(false);
+            // This will cause the object to dissapear
+            gameObject.SetActive(false);
+        }else{
+            gameObject.GetComponent<Trigger>().active = true;
+            this.active = false;
+        }
+
+        // // For the desk and fish tank, we need to modify this script
+        // // Deactivates the hover text associated with this object
+        // gameObject.GetComponent<HoverOver>().hoverOver.SetActive(false);
         
-        // This will cause the object to dissapear
-        gameObject.SetActive(false);
+        // // This will cause the object to dissapear
+        // gameObject.SetActive(false);
 
     }
 
