@@ -9,7 +9,8 @@ public class PickUp : MonoBehaviour
     private Inventory inventory;
     public bool active = true;
     
-    public Sprite inventorySprite;
+    //public Sprite inventorySprite;
+    public Sprite[] invSpr;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +45,10 @@ public class PickUp : MonoBehaviour
                 //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
                 //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
 
-                inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
+                for(int j = 0; j < invSpr.Length; j++){
+                    inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
+                }
+                //inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
                 Debug.Log(i);
                 break;
                 
