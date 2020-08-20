@@ -28,19 +28,22 @@ public class PickUp : MonoBehaviour
         }
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        Debug.Log("Dialogue started");
+        //Debug.Log("Dialogue started");
 
         // Add the item to the inventory here
-        Debug.Log("Item added to inventory");
+        //Debug.Log("Item added to inventory");
         
         // 1. Loop through the inventory to find an empty slot
         for(int i = 0; i < inventory.slots.Length; i++){
             if(inventory.isFull[i] == false){
+                Debug.Log("New item added");
                 inventory.isFull[i] = true;
                 //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
                 //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
 
                 inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
+                Debug.Log(i);
+                break;
                 
                 
                 // Add the sprite to the inventory
@@ -51,7 +54,7 @@ public class PickUp : MonoBehaviour
 
         // 3. Once that is done, PickUp must be deactivated and the normal trigger is activated
 
-        Debug.Log("Coroutine is now finished");
+        //Debug.Log("Coroutine is now finished");
         StopCoroutine(AddToInventory(target));
         
         
