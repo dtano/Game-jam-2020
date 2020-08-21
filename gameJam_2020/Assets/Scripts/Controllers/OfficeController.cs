@@ -28,6 +28,7 @@ public class OfficeController : MonoBehaviour
 
         if(player.GetComponent<Inventory>().full()){
             player.GetComponent<playerMovement>().enabled = false;
+            // Activates the door's playerTransfer script?
             Debug.Log("Every item has been taken");
             levelCleared = true;
         }

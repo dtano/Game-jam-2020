@@ -10,12 +10,6 @@
         public Dialogue dialogue;
         void OnMouseDown()
         {
-            
-            //GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
-            
-            //this.GetComponent<Clickable>().enabled = true;
-            
-            //this.GetComponent<Clickable>().initCoroutine();
 
             if(active){
                 Transform transform = GameObject.Find("Player").transform;
