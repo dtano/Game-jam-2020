@@ -32,10 +32,12 @@ public class PickUp : MonoBehaviour
         }
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        //Debug.Log("Dialogue started");
-
-        // Add the item to the inventory here
-        //Debug.Log("Item added to inventory");
+       
+        // Waits until the dialogue has ended before giving the item
+        while(FindObjectOfType<DialogueManager>().animator.GetBool("IsOpen") == true){
+            yield return null;
+        }
+        
         
         // 1. Loop through the inventory to find an empty slot
         for(int j = 0; j < invSpr.Length; j++){
@@ -43,8 +45,7 @@ public class PickUp : MonoBehaviour
                 if(inventory.isFull[i] == false){
                 Debug.Log("New item added");
                 inventory.isFull[i] = true;
-                //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
-                //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
+                
                 inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
 
                 //inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
@@ -57,30 +58,7 @@ public class PickUp : MonoBehaviour
                 }
             }
         }
-        // for(int i = 0; i < inventory.slots.Length; i++){
-        //     if(inventory.isFull[i] == false){
-        //         Debug.Log("New item added");
-        //         inventory.isFull[i] = true;
-        //         //inventory.slots[i].GetComponent<SetSlot>().enabled = true;
-        //         //inventory.slots[i].GetComponent<SetSlot>().inventorySprite = inventorySprite;
-
-
-
-        //         for(int j = 0; j < invSpr.Length; j++){
-        //             inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
-        //         }
-        //         //inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
-        //         Debug.Log(i);
-        //         break;
-                
-                
-        //         // Add the sprite to the inventory
-                
-        //     }
-        // }
-        // 2. Then somehow assign the inventorySprite to the slot's ItemImage
-
-        // 3. Once that is done, PickUp must be deactivated and the normal trigger is activated
+       
 
         //Debug.Log("Coroutine is now finished");
         StopCoroutine(AddToInventory(target));
