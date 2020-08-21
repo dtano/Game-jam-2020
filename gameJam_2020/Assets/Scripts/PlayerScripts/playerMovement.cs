@@ -97,8 +97,9 @@ public class playerMovement : MonoBehaviour
     }
     */
 
-    /* Create raycast to check whether there is wall in front of player
-    currently set to left side wall only
+
+
+     //Create raycast to check whether there is wall in front of player    
     void FixedUpdate()
     {
         //Length of the ray
@@ -106,18 +107,20 @@ public class playerMovement : MonoBehaviour
     
         int layerMask = LayerMask.GetMask("Default");
         
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, laserLength, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, target, laserLength, layerMask);
  
         
         if (hit.collider != null)
         {
             
             Debug.Log("Hitting: " + hit.collider.tag);
+            animator.SetFloat("Horizontal", 0);
+            target = new Vector2(transform.position.x, transform.position.y);
         }
- 
-        Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.red);
+        
+        Debug.DrawRay(transform.position, target * laserLength, Color.red);
     }
-    */
+    
     
     void flip(){
         faceRight = !faceRight;
