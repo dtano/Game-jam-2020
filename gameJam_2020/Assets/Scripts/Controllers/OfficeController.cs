@@ -6,6 +6,7 @@ public class OfficeController : MonoBehaviour
 {
     public GameObject player;
     public GameObject door;
+    private GameObject tutorialMessage;
     
     private DialogueManager dialogueManager;
     public Dialogue openingDialogue;
@@ -13,6 +14,7 @@ public class OfficeController : MonoBehaviour
 
     private bool levelStart = true;
     private bool levelCleared = false;
+    private bool tutorialCleared = false;
 
 
     Transform interactableObjects;
@@ -31,6 +33,9 @@ public class OfficeController : MonoBehaviour
         
         // All hover texts except letter
         hover = GameObject.Find("HoverText");
+
+        tutorialMessage = GameObject.Find("TutorialMessage");
+        tutorialMessage.SetActive(false);
         
         // Deactivates every interaction and hovers, except letter 
         deactivateTriggers();
@@ -46,13 +51,16 @@ public class OfficeController : MonoBehaviour
         // Opens the level with some dialogue
         if(levelStart){
             dialogueManager.StartDialogue(openingDialogue);
+            //tutorialMessage.SetActive(true);
             levelStart = false;
         }
 
         // Check to see whether or not the player has picked the letter up
-        if(player.GetComponent<Inventory>().isFull[0]){
+        if(player.GetComponent<Inventory>().isFull[0] && !tutorialCleared){
             // Activate every trigger and pickup of every other object
+            tutorialMessage.SetActive(false);
             activateTriggers();
+            tutorialCleared = true;
         }
 
         // When the player has picked everything up
@@ -81,6 +89,8 @@ public class OfficeController : MonoBehaviour
                 ob.GetComponent<Trigger>().active = true;
             }else if(ob.tag == "Removeable" || ob.tag == "Item Adder"){
                 ob.GetComponent<PickUp>().active = true;
+            }else if(ob.tag == "Item Adder"){
+                ob.GetComponent<PickUp>().active = true;
             }
         }
 
@@ -94,8 +104,11 @@ public class OfficeController : MonoBehaviour
             if(ob.name != "Letter_face_up"){
                 if(ob.tag == "Interactable"){
                     ob.GetComponent<Trigger>().active = false;
-                }else if(ob.tag == "Removeable" || ob.tag == "Item Adder"){
+                }else if(ob.tag == "Removeable"){
                     ob.GetComponent<PickUp>().active = false;
+                }else if(ob.tag == "Item Adder"){
+                    ob.GetComponent<PickUp>().active = false;
+                    ob.GetComponent<Trigger>().active = false;
                 }
             }
 
