@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerTransfer : MonoBehaviour
 {
     public bool active = false;
+    public Dialogue dialogue;
 
     void OnMouseDown()
         {
@@ -28,11 +29,15 @@ public class PlayerTransfer : MonoBehaviour
             Debug.Log("Reached the target");
             // Trigger the dialogue and freeze the player
             //GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
-        
+
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            
             // Waits until the dialogue has ended before giving the item
             while(FindObjectOfType<DialogueManager>().animator.GetBool("IsOpen") == true){
                 yield return null;
             }
+
+            // Play door sound effect
 
             // Leaving next level
             GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadNextLevel();

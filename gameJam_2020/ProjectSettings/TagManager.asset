@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Interactable
   - Removeable
+  - Item Adder
   layers:
   - Default
   - TransparentFX
