@@ -9,10 +9,12 @@ public class OfficeController : MonoBehaviour
     public Dialogue dialogue;
 
     private bool levelStart = true;
+    private bool levelCleared = false;
     // Start is called before the first frame update
     void Start()
     {
         player.GetComponent<playerMovement>().enabled = false;
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
 
     }
 
@@ -23,5 +25,13 @@ public class OfficeController : MonoBehaviour
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             levelStart = false;
         }
+
+        if(player.GetComponent<Inventory>().full()){
+            player.GetComponent<playerMovement>().enabled = false;
+            Debug.Log("Every item has been taken");
+            levelCleared = true;
+        }
+
+        
     }
 }

@@ -46,7 +46,7 @@ public class PickUp : MonoBehaviour
                 Debug.Log("New item added");
                 inventory.isFull[i] = true;
                 
-                inventory.slots[i].GetComponent<SetSlot>().setSlot(invSpr[j]);
+                inventory.slots[i].GetComponent<SetSlot>().setSlot(i, invSpr[j]);
 
                 //inventory.slots[i].GetComponent<SetSlot>().setSlot(inventorySprite);
                 Debug.Log(i);

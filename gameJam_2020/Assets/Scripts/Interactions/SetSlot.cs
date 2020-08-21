@@ -11,10 +11,12 @@ public class SetSlot : MonoBehaviour
     {
     }
 
-    public void setSlot(Sprite inventorySprite){
+    public void setSlot(int slotNum,Sprite inventorySprite){
         Image slotImage = transform.GetChild(0).GetComponent<Image>();
         slotImage.enabled = true;
         slotImage.sprite = inventorySprite;
+
+        GameObject.Find("Player").GetComponent<Inventory>().isFull[slotNum] = true;
     }
 
     
