@@ -8,6 +8,7 @@ public class ItemDragManager : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
 
     Vector2 originalPosition;
+    public IInventoryItem Item { get; set; }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -26,15 +27,5 @@ public class ItemDragManager : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.position = originalPosition;
         GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
