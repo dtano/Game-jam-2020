@@ -199,168 +199,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10784122}
   m_CullTransparentMesh: 0
---- !u!1 &100839367
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 100839368}
-  - component: {fileID: 100839369}
-  - component: {fileID: 100839371}
-  - component: {fileID: 100839370}
-  - component: {fileID: 100839373}
-  - component: {fileID: 100839372}
-  m_Layer: 8
-  m_Name: Board-filled
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &100839368
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100839367}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.17, y: 8.21, z: 72.55371}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 981189929}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &100839369
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100839367}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e6f16dc9fc06cb4ea6a7fa1c9a1756d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.02, y: 0.76}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &100839370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100839367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4b5ef0e77e3aca479fd1ef3c1e2c796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverOver: {fileID: 1986481554}
---- !u!61 &100839371
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100839367}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.02, y: 0.76}
-    newSize: {x: 1.02, y: 0.76}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.02, y: 0.76}
-  m_EdgeRadius: 0
---- !u!114 &100839372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100839367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94cb3b01a4f0a0e4b9ad0b5df46c284e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  dialogue:
-    name: 
-    sentences:
-    - I've taken everything from the board
---- !u!114 &100839373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100839367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fddc94b4bd1bb6b468a42dffcfeef8d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    sentences:
-    - I didn't see this the last time I was here. Well, whatever is on the board
-      can help me get to the bottom of this.
-  active: 1
-  invSpr:
-  - {fileID: 21300000, guid: a2f9bca056c9f6b47ac77d0d4e41d6c7, type: 3}
-  - {fileID: 21300000, guid: 4062e2273e58de84ab0ad9bf0a22939b, type: 3}
 --- !u!1 &122586391
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +586,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Its a window
+    - Wow, the view here is great, you can see the entire city from here. The sky
+      looks a bit cloudy today.
 --- !u!114 &269530190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,7 +1430,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 900307dbf057f624c8e1f2451be8b330, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.931
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2081,7 +1920,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 981189929}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &620347966
 MonoBehaviour:
@@ -2377,7 +2216,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 981189929}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &697936774
 MonoBehaviour:
@@ -2433,7 +2272,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - 'A letter? It might be for me. '
+    - Huh, a letter addressed to me, I wonder why the professor couldn't have talked
+      to me in person.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 2451cd6b3f2ab124cadd8a10ffa9a9be, type: 3}
@@ -7013,7 +6853,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 981189929}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &825933822
 MonoBehaviour:
@@ -7031,7 +6871,9 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - What a waste of pancakes!
+    - "Hmm, looks like the professor was here. Aren't these from Goro's, they're
+      his favourites, I wonder why he didn't eat them. Why was he in such a rush?
+      What a waste of good pancake\rs!"
 --- !u!114 &825933823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7504,7 +7346,6 @@ Transform:
   - {fileID: 1749517650}
   - {fileID: 1792628909}
   - {fileID: 1517129676}
-  - {fileID: 100839368}
   - {fileID: 1341750472}
   - {fileID: 825933821}
   - {fileID: 697936773}
@@ -8052,7 +7893,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Ah, I see the professor still has the plant I gave him.
+    - Ah, I see the professor still has the plant I gave him last month, and it's
+      doing well looks like it's getting enough sun.
 --- !u!61 &1070699871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9051,7 +8893,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 981189929}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.16701}
 --- !u!114 &1341750473
 MonoBehaviour:
@@ -9107,7 +8949,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - I should probably take this.
+    - Hmm, a voice recorder, maybe there is something important on here, I should
+      take it.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 9a3043596a7283e49a643c07baad71c7, type: 3}
@@ -9348,8 +9191,12 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Maybe if I search his drawers I can find something useful.
-    - Oh what's this?
+    - Maybe there is something useful in the drawers.
+    - "Oh what\u2019s this? A folder labelled \u201CErebus\u201D, hmm sounds greek,
+      I think I\u2019ve heard this word before. Looks like there\u2019s a bunch of
+      files in here, I\u2019ll take a look later back at my place."
+    - "Ah, the professor\u2019s Journal, I wonder what\u2019s in here, making it
+      will shed some light as to what happened to the professor."
   active: 1
   invSpr:
   - {fileID: 21300000, guid: e03f8923e6a04fd41a24b66ef7fde561, type: 3}
@@ -9494,7 +9341,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - I'm not fishing in there again.
+    - Ugh, I'm not fishing in there again.
 --- !u!114 &1518337004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9511,7 +9358,8 @@ MonoBehaviour:
     name: 
     sentences:
     - I wonder if there's something important here.
-    - 'Oh what''s this? '
+    - Hmm, there's a letter addressed to the professor from a "Mr Bears", a death
+      threat by the looks of it.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 9b9b0d00c7c32584399d2df9c87d14b4, type: 3}
@@ -10418,7 +10266,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - It's a fish tank
+    - Hey Bubba, you hungry? Here have some food.
 --- !u!61 &1792628913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10777,8 +10625,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - I didn't see this the last time I was here. Well, whatever is on the board
-      can help me get to the bottom of this.
+    - There was nothing pinned here last time, whatever these are, they might help
+      shed some light on what happened to Professor Nakamura.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 4062e2273e58de84ab0ad9bf0a22939b, type: 3}
@@ -10885,7 +10733,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 981189929}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986481554
 GameObject:
