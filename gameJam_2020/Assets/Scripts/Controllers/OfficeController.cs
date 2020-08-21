@@ -15,22 +15,26 @@ public class OfficeController : MonoBehaviour
     private bool levelCleared = false;
 
 
-    // Types of interactable objects
-    GameObject[] interactables;
-    GameObject[] removeables; 
-    GameObject[] itemAdders; 
+    Transform interactableObjects;
+    GameObject hover;
     
     // Start is called before the first frame update
     void Start()
     {
+        // Player can't move when the level starts
         player.GetComponent<playerMovement>().enabled = false;
         dialogueManager = FindObjectOfType<DialogueManager>();
 
-        interactables = GameObject.FindGameObjectsWithTag("Interactable");
-        removeables = GameObject.FindGameObjectsWithTag("Removeable");
-        itemAdders = GameObject.FindGameObjectsWithTag("Item Adder");
+        
+        // The list of interactable objects
+        interactableObjects = GameObject.Find("Interactable Objects").transform;
+        
+        // All hover texts except letter
+        hover = GameObject.Find("HoverText");
+        
+        // Deactivates every interaction and hovers, except letter 
         deactivateTriggers();
-        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        
 
         
 
@@ -39,16 +43,19 @@ public class OfficeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Opens the level with some dialogue
         if(levelStart){
             dialogueManager.StartDialogue(openingDialogue);
             levelStart = false;
         }
 
+        // Check to see whether or not the player has picked the letter up
         if(player.GetComponent<Inventory>().isFull[0]){
             // Activate every trigger and pickup of every other object
             activateTriggers();
         }
 
+        // When the player has picked everything up
         if(player.GetComponent<Inventory>().full() && !levelCleared){
             player.GetComponent<playerMovement>().enabled = false;
             door.GetComponent<Trigger>().active = false;
@@ -64,34 +71,35 @@ public class OfficeController : MonoBehaviour
         
     }
 
+    // Activates every hover text and trigger
     void activateTriggers(){
-        foreach(GameObject ob in interactables){
-            ob.GetComponent<Trigger>().active = true;
-        }
+        hover.SetActive(true);
+        foreach (Transform ob in interactableObjects.transform){
+            
 
-        foreach(GameObject ob in removeables){
-            ob.GetComponent<PickUp>().active = true;
-        }
-
-        foreach(GameObject ob in itemAdders){
-            ob.GetComponent<PickUp>().active = true;
+            if(ob.tag == "Interactable"){
+                ob.GetComponent<Trigger>().active = true;
+            }else if(ob.tag == "Removeable" || ob.tag == "Item Adder"){
+                ob.GetComponent<PickUp>().active = true;
+            }
         }
 
     }
 
+    // Deactivates every hover text and trigger
     void deactivateTriggers(){
-        foreach(GameObject ob in interactables){
-            ob.GetComponent<Trigger>().active = false;
-        }
+        hover.SetActive(false);
+        foreach (Transform ob in interactableObjects.transform){
 
-        foreach(GameObject ob in removeables){
             if(ob.name != "Letter_face_up"){
-                ob.GetComponent<PickUp>().active = false;
+                if(ob.tag == "Interactable"){
+                    ob.GetComponent<Trigger>().active = false;
+                }else if(ob.tag == "Removeable" || ob.tag == "Item Adder"){
+                    ob.GetComponent<PickUp>().active = false;
+                }
             }
-        }
 
-        foreach(GameObject ob in itemAdders){
-            ob.GetComponent<PickUp>().active = false;
+            
         }
     }
 }
