@@ -383,6 +383,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 4327393449381182544, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4404847701468419963, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -471,7 +476,7 @@ PrefabInstance:
     - target: {fileID: 7861471672297606932, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -350
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 7861471672297606932, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
         type: 3}
@@ -785,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Start Game
       objectReference: {fileID: 0}
+    - target: {fileID: 4327393449381182544, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4404847701468419963, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -924,6 +934,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861471672297606935, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000191154532769137, guid: acc57a39b8c015f47aa0ee9dda4d25cd, type: 3}
