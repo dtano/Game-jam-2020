@@ -65,8 +65,10 @@ public class LinkControl : MonoBehaviour
                     // Play dialogue
                     // How do we access the dialogue damn it
                     // Ah get the dialogue associated with this link, save it in the Link object
+                    StopAllCoroutines();
+                    StartCoroutine(playDialogue(links[linkIndex].dialogue));
+                    //dialogueManager.StartDialogue(links[linkIndex].dialogue);
                     
-                    dialogueManager.StartDialogue(links[linkIndex].dialogue);
                     disable();
                     Debug.Log("reset");
                     return true;
@@ -140,6 +142,20 @@ public class LinkControl : MonoBehaviour
             selectedItems[i] = null;
         }
         selectedItems = null;
+    }
+
+    IEnumerator playDialogue(Dialogue dialogue){
+        Debug.Log("function called");
+        dialogueManager.StartDialogue(dialogue);
+        GameObject.Find("Background").GetComponent<ControlButtons>().disableButtons();
+        while(dialogueManager.animator.GetBool("IsOpen") == true){
+            yield return null;
+        }
+
+        GameObject.Find("Background").GetComponent<ControlButtons>().activateButtons();
+
+        StopCoroutine(playDialogue(dialogue));
+
     }
 
     
