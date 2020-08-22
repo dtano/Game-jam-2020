@@ -23,7 +23,7 @@ TagManager:
   - 
   - Clickable Objects
   - Player
-  - 
+  - Gabriel
   - 
   - 
   - 
@@ -55,7 +55,7 @@ TagManager:
   - name: Furniture
     uniqueID: 4181152969
     locked: 0
-  - name: Marker
+  - name: Walls
     uniqueID: 3596902517
     locked: 0
   - name: Default

@@ -83,6 +83,7 @@ public class playerMovement : MonoBehaviour
         // The player is placed in a player layer and the furniture is placed in a furniture layer
         // This will ignore collisions between these 2 layers
         Physics2D.IgnoreLayerCollision(8,9);
+        Physics2D.IgnoreLayerCollision(9,10);
 
        
 
