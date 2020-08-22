@@ -14,9 +14,18 @@ public class LinkControl : MonoBehaviour
     Button[] selectedItems;
     public LinkStore linkStorage;
 
+    public Dialogue opening;
+    public Dialogue closing;
+
+    public Dialogue[] failedStatements;
+
+    private bool levelStart = true;
+    private bool levelCleared = false;
+
     
     private List<LinkArray> links;
     private List<Button> linkedObjects;
+    private System.Random rnd = new System.Random();
     
     // Which link the firstItem belongs to
     private int linkIndex;
@@ -27,11 +36,24 @@ public class LinkControl : MonoBehaviour
     {
         links = linkStorage.GetLinks();
         linkedObjects = new List<Button>();
+
+        // Disables the descriptions of the objects in the next game at the start of the level
+        GameObject[] nextPageDesc = GameObject.FindGameObjectsWithTag("Additional Desc");
+        for(int i = 0; i < nextPageDesc.Length; i++){
+            nextPageDesc[i].SetActive(false);
+        }
+        // StopAllCoroutines();
+        // StartCoroutine(playDialogue(opening));
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(levelStart){
+            StopAllCoroutines();
+            StartCoroutine(playDialogue(opening));
+            levelStart = false;
+        }
         if(firstItem != null){
             //Debug.Log(firstItem);
         }
@@ -101,7 +123,11 @@ public class LinkControl : MonoBehaviour
                 }
             }else{
                 // Play failed dialogue
-                //firstItem.interactable = true;
+
+                // Get random failed message
+                int errorIndex = rnd.Next(failedStatements.Length);
+                StopAllCoroutines();
+                StartCoroutine(playDialogue(failedStatements[errorIndex]));
                 reset();
             }
         }

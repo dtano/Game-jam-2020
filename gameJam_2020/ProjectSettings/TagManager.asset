@@ -12,6 +12,8 @@ TagManager:
   - Additional Board
   - Unlinked
   - Linked
+  - Additional Desc
+  - Main Desc
   layers:
   - Default
   - TransparentFX
