@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ButtonDetector : MonoBehaviour
 {
+    public GameObject linkController;
     void Start(){
 
     }
@@ -14,6 +16,12 @@ public class ButtonDetector : MonoBehaviour
     }
     
     public void getCurrentObject(){
-        Debug.Log(EventSystem.current.currentSelectedGameObject);
+        Button currentButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        currentButton.GetComponent<BoxCollider2D>().enabled = false;
+        Debug.Log(currentButton.name);
+        currentButton.interactable = false;
+
+        
+        
     }
 }
