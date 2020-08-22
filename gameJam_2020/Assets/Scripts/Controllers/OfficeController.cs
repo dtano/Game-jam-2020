@@ -55,6 +55,10 @@ public class OfficeController : MonoBehaviour
             levelStart = false;
         }
 
+        if(!tutorialCleared && dialogueManager.animator.GetBool("IsOpen") == false){
+            tutorialMessage.SetActive(true);
+        }
+
         // Check to see whether or not the player has picked the letter up
         if(player.GetComponent<Inventory>().isFull[0] && !tutorialCleared){
             // Activate every trigger and pickup of every other object

@@ -30,7 +30,7 @@ public class PickUp : MonoBehaviour
         while(Mathf.Abs(transform.position.x - target.position.x) > 1.0f){
                 yield return null;
         }
-
+    
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
        
         // Waits until the dialogue has ended before giving the item

@@ -9195,7 +9195,7 @@ MonoBehaviour:
     - "Oh what\u2019s this? A folder labelled \u201CErebus\u201D, hmm sounds greek,
       I think I\u2019ve heard this word before. Looks like there\u2019s a bunch of
       files in here, I\u2019ll take a look later back at my place."
-    - "Ah, the professor\u2019s Journal, I wonder what\u2019s in here, making it
+    - "Ah, the professor\u2019s Journal, I wonder what\u2019s in here, taking it
       will shed some light as to what happened to the professor."
   active: 1
   invSpr:
@@ -9357,9 +9357,11 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - I wonder if there's something important here.
-    - Hmm, there's a letter addressed to the professor from a "Mr Bears", a death
-      threat by the looks of it.
+    - One man's trash is another man's treasure. *sigh* Welp, here goes.
+    - Oh what's this? Hmm, it looks like a letter addressed to the professor from
+      a "Mr Bears".
+    - Judging from the red ink and the message, it seems like a threat to me.
+    - Oh professor, what are you up to this time.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 9b9b0d00c7c32584399d2df9c87d14b4, type: 3}
@@ -10625,8 +10627,12 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - There was nothing pinned here last time, whatever these are, they might help
-      shed some light on what happened to Professor Nakamura.
+    - 'There was nothing pinned here last time. I guess professor Nakamura has been
+      doing some digging on something or someone. '
+    - 'Hmm... It seems like the professor is looking into a certain Leonard Whittaker.
+      Isn''t he running for mayor? '
+    - Well whatever his deal is, I believe everything on the board can help me figure
+      out what's going on.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 4062e2273e58de84ab0ad9bf0a22939b, type: 3}
@@ -10658,7 +10664,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016205251, y: -0.009535193}
+  m_Offset: {x: 0.015917629, y: -0.067395926}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10669,7 +10675,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7043241, y: 1.2768977}
+  m_Size: {x: 1.0381444, y: 0.762318}
   m_EdgeRadius: 0
 --- !u!212 &1967182325
 SpriteRenderer:
