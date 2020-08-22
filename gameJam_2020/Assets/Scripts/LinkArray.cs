@@ -15,6 +15,7 @@ public class LinkArray : MonoBehaviour
 
     public bool find(Button item){
         for(int i = 0; i < links.Length; i++){
+            Debug.Log(links[i]);
             if(Array.Exists(links, element => element == item)){
                 return true;
             }

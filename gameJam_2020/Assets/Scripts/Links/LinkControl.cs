@@ -36,9 +36,11 @@ public class LinkControl : MonoBehaviour
         }
     }
 
+    // Attaches the button to either the firstItem or the selected items
     public bool attach(Button item){
         if(firstItem == null){
             firstItem = item;
+            Debug.Log(firstItem);
             for(int i = 0; i < links.Length; i++){
                 if(links[i].find(item)){
                     selectedItems = new Button[links[i].Length() - 1];
@@ -47,20 +49,45 @@ public class LinkControl : MonoBehaviour
                     return true;
                 }
             }
+            Debug.Log("Link somehow not found");
+            reset();
         }else if(firstItem != null && selectedItems != null){
-            for(int i = 0; i < selectedItems.Length; i++){
-                if(selectedItems[i] == null){
-                    selectedItems[i] = item;
+            Debug.Log("Time to check the other selected items");
+            if(links[linkIndex].find(item)){
+                if(selectedItems.Length == 1){
+                    selectedItems[0] = item;
+                    //item.interactable = false;
+                    // true link
+                    // Remove the items from the board
+                    // Play dialogue
+                    // How do we access the dialogue damn it
+                    // Ah get the dialogue associated with this link, save it in the Link object
+                    disable();
+                    Debug.Log("reset");
                     return true;
-                }
-            }
-           
+                }else{
+                    for(int i = 0; i < selectedItems.Length; i++){
+                        if(i == selectedItems.Length - 1){
+                            selectedItems[i] = item;
+                            disable();
+                            // True link
+                            // Play dialogue
+                            return true;
 
+                        }
+                        
+                        if(selectedItems[i] == null){
+                            selectedItems[i] = item;
+                            return true;
+                        }
+                    }
+                }
+            }else{
+                // Play failed dialogue
+                //firstItem.interactable = true;
+                reset();
+            }
         }
-        // else if(firstItem != null && secondItem == null){
-        //     secondItem = item;
-        //     return true;
-        // }
         
         return false;
 
@@ -82,6 +109,30 @@ public class LinkControl : MonoBehaviour
         // if(secondItem != null && secondItem.transform.parent == page){
         //     secondItem.interactable = false;
         // }
+    }
+
+    void reset(){
+        firstItem.interactable = true;
+        firstItem = null;
+        for(int i = 0; i < selectedItems.Length; i++){
+            selectedItems[i].interactable = true;
+            selectedItems[i] = null;
+        }
+        selectedItems = null;
+    }
+
+    void disable(){
+        firstItem.interactable = false;
+        firstItem.GetComponent<BoxCollider2D>().enabled = false;
+        firstItem = null;
+
+        for(int i = 0; i < selectedItems.Length; i++){
+            Debug.Log(selectedItems[i]);
+            selectedItems[i].interactable = false;
+            selectedItems[i].GetComponent<BoxCollider2D>().enabled = false;
+            selectedItems[i] = null;
+        }
+        selectedItems = null;
     }
 
     
