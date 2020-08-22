@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 181016872}
   m_Layer: 5
   m_Name: News_article_whittaker
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,8 +316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 434, y: 323.3}
-  m_SizeDelta: {x: 232.30145, y: 289.84473}
+  m_AnchoredPosition: {x: 161, y: 185.33}
+  m_SizeDelta: {x: 83.90875, y: 117.74811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &181016872
 BoxCollider2D:
@@ -332,7 +332,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: 1.223732, y: -2.4469376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -343,7 +343,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 83.570984, y: 102.37541}
   m_EdgeRadius: 0
 --- !u!114 &181016873
 MonoBehaviour:
@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 381471923}
   m_Layer: 5
   m_Name: Professor_disappearance
-  m_TagString: Double Link
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,8 +772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402, y: -75.7}
-  m_SizeDelta: {x: 190.85635, y: 214.49005}
+  m_AnchoredPosition: {x: -173, y: 44.41}
+  m_SizeDelta: {x: 72.33478, y: 88.818695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &381471923
 BoxCollider2D:
@@ -788,7 +788,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: -0.000022888184, y: -3.1516323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -799,7 +799,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 77.003006, y: 100.5051}
   m_EdgeRadius: 0
 --- !u!114 &381471924
 MonoBehaviour:
@@ -1119,6 +1119,7 @@ GameObject:
   - component: {fileID: 492863905}
   - component: {fileID: 492863907}
   - component: {fileID: 492863906}
+  - component: {fileID: 492863908}
   m_Layer: 5
   m_Name: Background
   m_TagString: Main Board
@@ -1144,8 +1145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00073242, y: 113.1}
-  m_SizeDelta: {x: 1920.0015, y: 853.81995}
+  m_AnchoredPosition: {x: 0.000042915, y: 63.7}
+  m_SizeDelta: {x: 800, y: 322.5688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492863906
 MonoBehaviour:
@@ -1184,6 +1185,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492863904}
   m_CullTransparentMesh: 0
+--- !u!114 &492863908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492863904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ea9ac2d1708404aa2d77055f00b786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &533900851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,7 +1292,7 @@ GameObject:
   - component: {fileID: 551152088}
   m_Layer: 5
   m_Name: Receipt_techtonic
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1301,8 +1314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -695, y: -75.7}
-  m_SizeDelta: {x: 190.85635, y: 214.49005}
+  m_AnchoredPosition: {x: -295, y: 42.394}
+  m_SizeDelta: {x: 63.38971, y: 84.78714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &551152088
 BoxCollider2D:
@@ -1317,7 +1330,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: 2.2362404, y: -0.000011444092}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1328,7 +1341,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 63.58541, y: 89.729225}
   m_EdgeRadius: 0
 --- !u!114 &551152089
 MonoBehaviour:
@@ -1527,7 +1540,7 @@ GameObject:
   - component: {fileID: 604090098}
   m_Layer: 5
   m_Name: NextButton
-  m_TagString: Main Board
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1549,8 +1562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 753.00073, y: -331.09998}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 368.08, y: -146.28}
+  m_SizeDelta: {x: 63.84082, y: 30.004387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604090098
 MonoBehaviour:
@@ -1895,7 +1908,7 @@ GameObject:
   - component: {fileID: 706518877}
   m_Layer: 5
   m_Name: journalEntry2
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1917,8 +1930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 205, y: -77}
-  m_SizeDelta: {x: 190.05249, y: 212.82007}
+  m_AnchoredPosition: {x: 85, y: 40.552}
+  m_SizeDelta: {x: 92.98065, y: 96.53467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &706518877
 BoxCollider2D:
@@ -1933,7 +1946,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: 1.1212311, y: 1.1181431}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1944,7 +1957,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 97.12924, y: 105.383026}
   m_EdgeRadius: 0
 --- !u!114 &706518878
 MonoBehaviour:
@@ -2062,6 +2075,7 @@ GameObject:
   - component: {fileID: 761732758}
   - component: {fileID: 761732757}
   - component: {fileID: 761732756}
+  - component: {fileID: 761732760}
   m_Layer: 5
   m_Name: MainBoard
   m_TagString: Untagged
@@ -2098,7 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2151,6 +2165,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &761732760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761732755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ea9ac2d1708404aa2d77055f00b786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801648530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,7 +2560,7 @@ GameObject:
   - component: {fileID: 980197631}
   m_Layer: 5
   m_Name: Threat
-  m_TagString: Double Link
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2556,8 +2582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -708.3, y: 323.3}
-  m_SizeDelta: {x: 214.15265, y: 246.51044}
+  m_AnchoredPosition: {x: -295, y: 180}
+  m_SizeDelta: {x: 92.27225, y: 103.782104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &980197631
 BoxCollider2D:
@@ -2572,7 +2598,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00015258789, y: 1.6150818}
+  m_Offset: {x: 1.6051445, y: 2.4161854}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2583,7 +2609,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 227.57993, y: 240.80243}
+  m_Size: {x: 92.87397, y: 107.691986}
   m_EdgeRadius: 0
 --- !u!114 &980197632
 MonoBehaviour:
@@ -2767,6 +2793,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026442816}
   m_CullTransparentMesh: 0
+--- !u!1 &1127238462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127238464}
+  - component: {fileID: 1127238463}
+  m_Layer: 0
+  m_Name: Link(journal1-flyer-fakeid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1127238463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127238462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 1620826683}
+  - {fileID: 1778794522}
+  - {fileID: 1778405321}
+  dialogue:
+    name: George
+    sentences:
+    - Seems like a link to me
+--- !u!4 &1127238464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127238462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149077139}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149077138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,6 +2873,7 @@ Transform:
   m_Children:
   - {fileID: 2045907767}
   - {fileID: 2040957569}
+  - {fileID: 1127238464}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3445,7 +3523,7 @@ GameObject:
   - component: {fileID: 1474189921}
   m_Layer: 5
   m_Name: Receipt_ryker
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3467,8 +3545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451, y: -77}
-  m_SizeDelta: {x: 190.05249, y: 212.82007}
+  m_AnchoredPosition: {x: 194, y: 44.41}
+  m_SizeDelta: {x: 64.82202, y: 96.5347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1474189921
 BoxCollider2D:
@@ -3483,7 +3561,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: -1.1139793, y: 1.1181488}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3494,7 +3572,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 65.82182, y: 105.383026}
   m_EdgeRadius: 0
 --- !u!114 &1474189922
 MonoBehaviour:
@@ -3616,7 +3694,7 @@ GameObject:
   - component: {fileID: 1488432737}
   m_Layer: 5
   m_Name: Blueprints
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3638,8 +3716,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171, y: 323.3}
-  m_SizeDelta: {x: 232.30145, y: 289.84473}
+  m_AnchoredPosition: {x: 45.693, y: 185.33}
+  m_SizeDelta: {x: 91.385956, y: 114.43988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1488432737
 BoxCollider2D:
@@ -3654,7 +3732,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: -0.000030517578, y: -0.9999466}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3665,7 +3743,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 100.88069, y: 117.03331}
   m_EdgeRadius: 0
 --- !u!114 &1488432738
 MonoBehaviour:
@@ -3787,7 +3865,7 @@ GameObject:
   - component: {fileID: 1495987632}
   m_Layer: 5
   m_Name: News_article_bombing
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3809,8 +3887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 703, y: 323.3}
-  m_SizeDelta: {x: 232.30145, y: 289.84473}
+  m_AnchoredPosition: {x: 282, y: 185.33}
+  m_SizeDelta: {x: 83.90875, y: 117.7481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1495987632
 BoxCollider2D:
@@ -3825,7 +3903,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: -1.025238, y: -3.0914307}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3836,7 +3914,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 83.74129, y: 101.641846}
   m_EdgeRadius: 0
 --- !u!114 &1495987633
 MonoBehaviour:
@@ -4144,6 +4222,7 @@ MonoBehaviour:
   listOfLinks:
   - {fileID: 2045907766}
   - {fileID: 2040957568}
+  - {fileID: 1127238463}
 --- !u!1 &1615026208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4235,7 +4314,7 @@ GameObject:
   - component: {fileID: 1620826687}
   m_Layer: 5
   m_Name: journalEntry1
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4257,8 +4336,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398, y: 322}
-  m_SizeDelta: {x: 190.05249, y: 212.82007}
+  m_AnchoredPosition: {x: -173, y: 178.44}
+  m_SizeDelta: {x: 80.13568, y: 94.90924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620826683
 MonoBehaviour:
@@ -4377,7 +4456,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: 0.99922943, y: 0.99833107}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4388,7 +4467,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 86.890945, y: 97.04843}
   m_EdgeRadius: 0
 --- !u!1 &1637851058
 GameObject:
@@ -4640,7 +4719,7 @@ GameObject:
   - component: {fileID: 1747235146}
   m_Layer: 5
   m_Name: journalEntry3
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4662,8 +4741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 705, y: -77}
-  m_SizeDelta: {x: 190.05249, y: 212.82007}
+  m_AnchoredPosition: {x: 285.95, y: 38.316}
+  m_SizeDelta: {x: 76.00336, y: 92.06213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1747235146
 BoxCollider2D:
@@ -4678,7 +4757,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: 1.1218262, y: -1.1181221}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4689,7 +4768,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 79.239105, y: 100.910484}
   m_EdgeRadius: 0
 --- !u!114 &1747235147
 MonoBehaviour:
@@ -4811,7 +4890,7 @@ GameObject:
   - component: {fileID: 1778405319}
   m_Layer: 5
   m_Name: Fake_id
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4833,8 +4912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -87, y: -75.7}
-  m_SizeDelta: {x: 276.8643, y: 214.49005}
+  m_AnchoredPosition: {x: -54.572, y: 40.773}
+  m_SizeDelta: {x: 109.14493, y: 81.545044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1778405319
 BoxCollider2D:
@@ -4849,7 +4928,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000022888184, y: -0.000015258789}
+  m_Offset: {x: -2.2334824, y: 2.236248}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4860,7 +4939,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 271.36835, y: 214.96017}
+  m_Size: {x: 110.36287, y: 85.25669}
   m_EdgeRadius: 0
 --- !u!114 &1778405320
 MonoBehaviour:
@@ -4982,7 +5061,7 @@ GameObject:
   - component: {fileID: 1778794520}
   m_Layer: 5
   m_Name: Flyer
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5004,8 +5083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102, y: 322}
-  m_SizeDelta: {x: 190.05249, y: 212.82007}
+  m_AnchoredPosition: {x: -61, y: 178.56}
+  m_SizeDelta: {x: 78.137024, y: 100.90471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1778794520
 BoxCollider2D:
@@ -5020,7 +5099,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00002670288, y: -0.000015258789}
+  m_Offset: {x: 0.99923706, y: -0.9999218}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5031,7 +5110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 188.81628, y: 214.96017}
+  m_Size: {x: 86.89093, y: 121.030304}
   m_EdgeRadius: 0
 --- !u!114 &1778794521
 MonoBehaviour:
@@ -5151,7 +5230,7 @@ GameObject:
   - component: {fileID: 1805789574}
   m_Layer: 5
   m_Name: BackButton
-  m_TagString: Untagged
+  m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5173,8 +5252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758, y: -332}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -361.1, y: -191.9}
+  m_SizeDelta: {x: 63.84088, y: 32.236263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805789574
 MonoBehaviour:
@@ -5458,8 +5537,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -426.91003}
-  m_SizeDelta: {x: 0, y: -853.81085}
+  m_AnchoredPosition: {x: -0.6999512, y: -161.28998}
+  m_SizeDelta: {x: 24.231384, y: -322.5885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1960472572
 MonoBehaviour:

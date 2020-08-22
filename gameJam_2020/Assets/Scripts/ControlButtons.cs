@@ -9,7 +9,7 @@ public class ControlButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttons = GameObject.FindGameObjectsWithTag("Button");
+        buttons = GameObject.FindGameObjectsWithTag("Unlinked");
     }
 
     // Update is called once per frame
@@ -18,12 +18,12 @@ public class ControlButtons : MonoBehaviour
         
     }
 
-    public void disableButtons(Button exemptButton){
-        exemptButton.interactable = false;
+    public void disableButtons(){
+        buttons =  GameObject.FindGameObjectsWithTag("Unlinked");
         for(int i = 0; i < buttons.Length; i++){
-            if(buttons[i] != exemptButton){
-                buttons[i].GetComponent<Button>().enabled = false;
-            }
+            Debug.Log(buttons[i].name);
+            buttons[i].GetComponent<Button>().enabled = false;
+        
             //buttons[i].GetComponent<Button>().enabled = false;
             
         }

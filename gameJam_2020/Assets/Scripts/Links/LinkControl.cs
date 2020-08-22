@@ -16,6 +16,7 @@ public class LinkControl : MonoBehaviour
 
     
     private List<LinkArray> links;
+    private List<Button> linkedObjects;
     
     // Which link the firstItem belongs to
     private int linkIndex;
@@ -25,6 +26,7 @@ public class LinkControl : MonoBehaviour
     void Start()
     {
         links = linkStorage.GetLinks();
+        linkedObjects = new List<Button>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class LinkControl : MonoBehaviour
 
     // Attaches the button to either the firstItem or the selected items
     public bool attach(Button item){
+        // For the first selected object
         if(firstItem == null){
             firstItem = item;
             Debug.Log(firstItem);
@@ -58,9 +61,11 @@ public class LinkControl : MonoBehaviour
             reset();
         }else if(firstItem != null && selectedItems != null){
             Debug.Log("Time to check the other selected items");
-            if(links.ElementAt(linkIndex)){
+            
+            if(links.ElementAt(linkIndex).find(item)){
                 if(selectedItems.Length == 1){
                     selectedItems[0] = item;
+                    addToLinkedObjects();
                     // true link
                     // Play dialogue
                     // How do we access the dialogue damn it
@@ -76,6 +81,11 @@ public class LinkControl : MonoBehaviour
                     for(int i = 0; i < selectedItems.Length; i++){
                         if(i == selectedItems.Length - 1){
                             selectedItems[i] = item;
+                            addToLinkedObjects();
+                            
+                            StopAllCoroutines();
+                            StartCoroutine(playDialogue(links[linkIndex].dialogue));
+                            
                             disable();
                             // True link
                             // Play dialogue
@@ -123,8 +133,12 @@ public class LinkControl : MonoBehaviour
         firstItem.interactable = true;
         firstItem = null;
         for(int i = 0; i < selectedItems.Length; i++){
-            selectedItems[i].interactable = true;
-            selectedItems[i] = null;
+            if(selectedItems[i] != null){
+                selectedItems[i].interactable = true;
+                selectedItems[i] = null;
+            }
+            // selectedItems[i].interactable = true;
+            // selectedItems[i] = null;
         }
         selectedItems = null;
     }
@@ -137,17 +151,21 @@ public class LinkControl : MonoBehaviour
 
         for(int i = 0; i < selectedItems.Length; i++){
             Debug.Log(selectedItems[i]);
-            selectedItems[i].interactable = false;
-            selectedItems[i].GetComponent<BoxCollider2D>().enabled = false;
-            selectedItems[i] = null;
+            if(selectedItems[i] != null){
+                selectedItems[i].interactable = false;
+                selectedItems[i].GetComponent<BoxCollider2D>().enabled = false;
+                selectedItems[i] = null;
+            }
+            // selectedItems[i].interactable = false;
+            // selectedItems[i].GetComponent<BoxCollider2D>().enabled = false;
+            // selectedItems[i] = null;
         }
         selectedItems = null;
     }
 
     IEnumerator playDialogue(Dialogue dialogue){
-        Debug.Log("function called");
         dialogueManager.StartDialogue(dialogue);
-        GameObject.Find("Background").GetComponent<ControlButtons>().disableButtons(firstItem);
+        GameObject.Find("Background").GetComponent<ControlButtons>().disableButtons();
         while(dialogueManager.animator.GetBool("IsOpen") == true){
             yield return null;
         }
@@ -156,6 +174,21 @@ public class LinkControl : MonoBehaviour
 
         StopCoroutine(playDialogue(dialogue));
 
+    }
+
+    void addToLinkedObjects(){
+        linkedObjects.Add(firstItem);
+        firstItem.transform.gameObject.tag = "Linked";
+
+        for(int i = 0; i < selectedItems.Length; i++){
+            if(selectedItems[i] != null){
+                Debug.Log("Time to change tags");
+                selectedItems[i].transform.gameObject.tag = "Linked";
+                linkedObjects.Add(selectedItems[i]);
+            }else{
+                Debug.Log("No change because null");
+            }
+        }
     }
 
     
