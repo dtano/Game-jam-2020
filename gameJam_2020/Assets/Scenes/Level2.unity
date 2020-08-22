@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 381471924}
   - component: {fileID: 381471923}
   m_Layer: 5
-  m_Name: Professor_disappearance
+  m_Name: Mr_Bears
   m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2074,6 +2074,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706518875}
   m_CullTransparentMesh: 0
+--- !u!1 &758918182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758918183}
+  - component: {fileID: 758918184}
+  m_Layer: 0
+  m_Name: Link(Techtonic-Riker)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &758918183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758918182}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149077139}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758918184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758918182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 551152090}
+  - {fileID: 1474189923}
+  dialogue:
+    name: Gabriel
+    sentences:
+    - 'Hey, these Receipts from the Gardening supply and the Electrical store. They
+      look like items used to make a homemade bomb, why did these people need with
+      a bomb
+
+
+'
 --- !u!1 &761732755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2783,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980197629}
   m_CullTransparentMesh: 0
+--- !u!1 &1010879550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010879551}
+  - component: {fileID: 1010879552}
+  m_Layer: 0
+  m_Name: Link(VoiceRecorder-article_bombing)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1010879551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010879550}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149077139}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010879552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010879550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 1495987634}
+  - {fileID: 1474189923}
+  dialogue:
+    name: George
+    sentences:
+    - "It seems that Mr. \u201CBears\u201D was the mastermind behind obtaining the
+      blueprint and staging the attack on San Minuto Central\n\n"
 --- !u!1 &1026442816
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,7 +2923,7 @@ GameObject:
   - component: {fileID: 1127238464}
   - component: {fileID: 1127238463}
   m_Layer: 0
-  m_Name: Link(journal1-flyer-fakeid)
+  m_Name: Link(journal1-flyer-fakeid) ?Maybe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2855,7 +2961,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149077139}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149077138
 GameObject:
@@ -2885,6 +2991,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2045907767}
+  - {fileID: 2057146510}
+  - {fileID: 2073698065}
+  - {fileID: 1301638455}
+  - {fileID: 758918183}
+  - {fileID: 1010879551}
   - {fileID: 2040957569}
   - {fileID: 1127238464}
   m_Father: {fileID: 0}
@@ -3268,6 +3379,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267297518}
   m_CullTransparentMesh: 0
+--- !u!1 &1301638454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301638455}
+  - component: {fileID: 1301638456}
+  m_Layer: 0
+  m_Name: Link(journal3-fakeid)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1301638455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301638454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149077139}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301638456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301638454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 1747235148}
+  - {fileID: 1778405321}
+  dialogue:
+    name: George
+    sentences:
+    - "looks like he was going to interview Whittaker, since he was finalising the
+      interview questions with Whittaker\u2019s secretary."
+    - It seems like he used the Fake ID to conceal his real identity, but they found
+      out anyway, and now the professor is on the run.
 --- !u!1 &1366963319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3699,7 @@ GameObject:
   - component: {fileID: 1474189922}
   - component: {fileID: 1474189921}
   m_Layer: 5
-  m_Name: Receipt_ryker
+  m_Name: Receipt_riker
   m_TagString: Unlinked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4237,9 +4401,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listOfLinks:
+  - {fileID: 2057146511}
+  - {fileID: 2073698066}
+  - {fileID: 1301638456}
+  - {fileID: 758918184}
   - {fileID: 2045907766}
-  - {fileID: 2040957568}
-  - {fileID: 1127238463}
+  - {fileID: 1010879552}
 --- !u!1 &1615026208
 GameObject:
   m_ObjectHideFlags: 0
@@ -5842,7 +6009,7 @@ GameObject:
   - component: {fileID: 2040957569}
   - component: {fileID: 2040957568}
   m_Layer: 0
-  m_Name: Link(blueprint-article)
+  m_Name: Link(blueprint-email) ?Needs email button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5865,7 +6032,10 @@ MonoBehaviour:
   - {fileID: 1495987634}
   dialogue:
     name: 
-    sentences: []
+    sentences:
+    - "Blueprints of San Minuto Central, looks like this was attached to one of the
+      emails sent to Mr \u201CBears\u201D. So, Mr. Bears had the blueprint of the
+      building that was attacked."
 --- !u!4 &2040957569
 Transform:
   m_ObjectHideFlags: 0
@@ -5878,7 +6048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149077139}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045907765
 GameObject:
@@ -5892,7 +6062,7 @@ GameObject:
   - component: {fileID: 2045907766}
   - component: {fileID: 2045907768}
   m_Layer: 0
-  m_Name: Link(threat-disappearance)
+  m_Name: Link(threat-MrBears-Listofname)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5916,7 +6086,8 @@ MonoBehaviour:
   dialogue:
     name: George
     sentences:
-    - This threat could be the reason why the professor has gone missing
+    - The threat letter says a Kobayashi Maru situation. What kind of no-win situation
+      is the professor in? looks like he is in danger and who is this Mr. Bears.
 --- !u!4 &2045907767
 Transform:
   m_ObjectHideFlags: 0
@@ -5943,6 +6114,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d94bf28bab064d985afef5e7e7bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2057146509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057146510}
+  - component: {fileID: 2057146511}
+  m_Layer: 0
+  m_Name: Link(journal1-flyer)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2057146510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057146509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149077139}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2057146511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057146509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 1620826683}
+  - {fileID: 1778794522}
+  dialogue:
+    name: George
+    sentences:
+    - It seems like the professor was attending an event for the Candidate Mayor,
+      Leonard Whittaker, why was he there? Was he there to investigate something?
 --- !u!1 &2058005746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6021,6 +6243,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058005746}
   m_CullTransparentMesh: 0
+--- !u!1 &2073698064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073698065}
+  - component: {fileID: 2073698066}
+  m_Layer: 0
+  m_Name: Link(journal2-article_whittaker)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2073698065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073698064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149077139}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073698066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073698064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 706518879}
+  - {fileID: 181016874}
+  dialogue:
+    name: George
+    sentences:
+    - the professor seem to had met an informant about the attack on San Minuto Central,
+      according to the board in the office, it seems like that Candidate Whittaker
+      is somehow linked to the attack.
 --- !u!1 &2077725515
 GameObject:
   m_ObjectHideFlags: 0
