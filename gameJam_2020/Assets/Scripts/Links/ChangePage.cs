@@ -9,7 +9,6 @@ public class ChangePage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GameObject.Find("NextPage").name);
     }
 
     // Update is called once per frame

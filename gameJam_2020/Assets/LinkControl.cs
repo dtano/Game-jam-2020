@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class LinkControl : MonoBehaviour
+{
+    Button firstItem;
+    Button secondItem;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(firstItem != null){
+            //Debug.Log(firstItem);
+        }
+
+        if(secondItem != null){
+            //Debug.Log(secondItem);
+        }
+    }
+
+    public bool attach(Button item){
+        if(firstItem == null){
+            firstItem = item;
+            return true;
+        }else if(firstItem != null && secondItem == null){
+            secondItem = item;
+            return true;
+        }
+        
+        return false;
+
+    }
+}

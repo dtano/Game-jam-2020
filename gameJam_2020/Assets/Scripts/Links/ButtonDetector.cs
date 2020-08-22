@@ -17,9 +17,15 @@ public class ButtonDetector : MonoBehaviour
     
     public void getCurrentObject(){
         Button currentButton = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        currentButton.GetComponent<BoxCollider2D>().enabled = false;
-        Debug.Log(currentButton.name);
-        currentButton.interactable = false;
+        
+        if(linkController.GetComponent<LinkControl>().attach(currentButton)){
+            currentButton.GetComponent<BoxCollider2D>().enabled = false;
+            currentButton.interactable = false;
+        }else{
+            Debug.Log("Can't select anymore");
+        }
+
+        
 
         
         
