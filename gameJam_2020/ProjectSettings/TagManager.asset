@@ -53,6 +53,9 @@ TagManager:
   - name: Furniture
     uniqueID: 4181152969
     locked: 0
+  - name: Marker
+    uniqueID: 3596902517
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
