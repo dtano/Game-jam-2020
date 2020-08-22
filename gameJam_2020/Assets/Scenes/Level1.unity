@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   dialogue:
-    name: 
+    name: George
     sentences:
     - Wow, the view here is great, you can see the entire city from here. The sky
       looks a bit cloudy today.
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   dialogue:
-    name: 
+    name: George
     sentences:
     - I can't leave yet. There might be some clues I missed.
 --- !u!114 &610405398
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   dialogue:
-    name: 
+    name: George
     sentences:
     - I've taken everything from the board.
 --- !u!114 &620347967
@@ -6874,7 +6874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   dialogue:
-    name: 
+    name: George
     sentences:
     - 'Hmm, looks like the professor was here. Aren''t these from Goro''s, they''re
       his favourites, I wonder why he didn''t eat them. '
@@ -7896,7 +7896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   dialogue:
-    name: 
+    name: George
     sentences:
     - Ah, I see the professor still has the plant I gave him last month, and it's
       doing well looks like it's getting enough sun.
@@ -8952,7 +8952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: George
     sentences:
     - Hmm, a voice recorder, maybe there is something important on here, I should
       take it.
@@ -9178,7 +9178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   dialogue:
-    name: 
+    name: George
     sentences:
     - I believe I've taken everything important.
 --- !u!114 &1517129680
@@ -9194,7 +9194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: George
     sentences:
     - Maybe there is something useful in the drawers.
     - "Oh what\u2019s this? A folder labelled \u201CErebus\u201D, hmm sounds greek,
@@ -9345,7 +9345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   dialogue:
-    name: 
+    name: George
     sentences:
     - Ugh, I'm not fishing in there again.
 --- !u!114 &1518337004
@@ -9361,7 +9361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: George
     sentences:
     - One man's trash is another man's treasure. *sigh* Welp, here goes.
     - Oh what's this? Hmm, it looks like a letter addressed to the professor from
@@ -10273,7 +10273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   dialogue:
-    name: 
+    name: George
     sentences:
     - Hey Bubba, you hungry? Here have some food.
 --- !u!61 &1792628913
@@ -10632,7 +10632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: George
     sentences:
     - There was nothing pinned here last time. I guess professor Nakamura is investigating
       something.
