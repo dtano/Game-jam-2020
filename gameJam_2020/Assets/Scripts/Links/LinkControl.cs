@@ -38,4 +38,14 @@ public class LinkControl : MonoBehaviour
         return false;
 
     }
+
+    public void restoreLinks(GameObject page){
+        if(firstItem != null && firstItem.transform.parent == page){
+            firstItem.interactable = false;
+        }
+
+        if(secondItem != null && secondItem.transform.parent == page){
+            secondItem.interactable = false;
+        }
+    }
 }

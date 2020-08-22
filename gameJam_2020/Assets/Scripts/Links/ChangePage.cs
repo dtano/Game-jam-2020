@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ChangePage : MonoBehaviour
 {
+    public GameObject linkController;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +44,8 @@ public class ChangePage : MonoBehaviour
         foreach(Transform child in transform){
             child.gameObject.SetActive(true);
         }
+
+        linkController.GetComponent<LinkControl>().restoreLinks(page);
+
     }
 }
