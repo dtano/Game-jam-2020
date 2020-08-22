@@ -20,7 +20,7 @@ public class RoomController : MonoBehaviour
     {
         
         target = marker.transform.position;
-        GameObject.Find("Player").GetComponent<playerMovement>().stop();
+        GameObject.Find("Player").GetComponent<playerMovement>().enabled = false;
         FindObjectOfType<DialogueManager>().StartDialogue(openingDialogue);
         
         gabrielAnimator.SetBool("move", true);
@@ -39,18 +39,14 @@ public class RoomController : MonoBehaviour
         float distance = (gabriel.transform.position.x - target.x);
         Debug.Log(distance);
         if(distance <= 2)
-        {
-            
+        { 
             gabrielAnimator.SetBool("move", false);
             target = new Vector2(gabriel.transform.position.x, gabriel.transform.position.y);
             
-            
         }
-        
-            
+        Physics2D.IgnoreLayerCollision(8,10);
         
     }
-    
     
 
     
