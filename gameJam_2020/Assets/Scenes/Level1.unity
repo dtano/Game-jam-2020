@@ -2270,10 +2270,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
+    name: Letter
     sentences:
-    - Huh, a letter addressed to me, I wonder why the professor couldn't have talked
-      to me in person.
+    - "George, if you are reading this I\u2019m afraid something came up, there are
+      some dangerous people after me."
+    - I need you to continue my work, you will find everything you need in the office.
+    - "I trust that you will find out the truth, also please take care of Bubba for
+      me while I\u2019m gone."
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 2451cd6b3f2ab124cadd8a10ffa9a9be, type: 3}
@@ -2326,11 +2329,13 @@ MonoBehaviour:
     name: George
     sentences:
     - Where's the professor? I'm here on time aren't I?
-    - Oh what's that letter on his table?
+    - Oh what's that letter on his table? Huh, a letter addressed to me, I wonder
+      why the professor couldn't have talked to me in person.
   closingDialogue:
     name: George
     sentences:
-    - I'll get to the bottom of this.
+    - Alright, I that's everything. I should head back to my room and find out what
+      these are and what happened to the professor
 --- !u!1 &800121349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6871,9 +6876,9 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - "Hmm, looks like the professor was here. Aren't these from Goro's, they're
-      his favourites, I wonder why he didn't eat them. Why was he in such a rush?
-      What a waste of good pancake\rs!"
+    - 'Hmm, looks like the professor was here. Aren''t these from Goro''s, they''re
+      his favourites, I wonder why he didn''t eat them. '
+    - "Why was he in such a rush? What a waste of good pancake\rs!"
 --- !u!114 &825933823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9193,10 +9198,11 @@ MonoBehaviour:
     sentences:
     - Maybe there is something useful in the drawers.
     - "Oh what\u2019s this? A folder labelled \u201CErebus\u201D, hmm sounds greek,
-      I think I\u2019ve heard this word before. Looks like there\u2019s a bunch of
-      files in here, I\u2019ll take a look later back at my place."
-    - "Ah, the professor\u2019s Journal, I wonder what\u2019s in here, taking it
-      will shed some light as to what happened to the professor."
+      I think I\u2019ve heard this word before. "
+    - "Looks like there\u2019s a bunch of files in here, I\u2019ll take a look later
+      back at my place."
+    - The professor's Journal, maybe it will help shed some light as to what happened
+      to him.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: e03f8923e6a04fd41a24b66ef7fde561, type: 3}
@@ -9360,7 +9366,8 @@ MonoBehaviour:
     - One man's trash is another man's treasure. *sigh* Welp, here goes.
     - Oh what's this? Hmm, it looks like a letter addressed to the professor from
       a "Mr Bears".
-    - Judging from the red ink and the message, it seems like a threat to me.
+    - Judging from the red ink and the message, it seems like a threat letter to
+      me.
     - Oh professor, what are you up to this time.
   active: 1
   invSpr:
@@ -10627,12 +10634,14 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - 'There was nothing pinned here last time. I guess professor Nakamura has been
-      doing some digging on something or someone. '
+    - There was nothing pinned here last time. I guess professor Nakamura is investigating
+      something.
     - 'Hmm... It seems like the professor is looking into a certain Leonard Whittaker.
       Isn''t he running for mayor? '
     - Well whatever his deal is, I believe everything on the board can help me figure
       out what's going on.
+    - There is also another article here about a terror attack on San Minuto Central,
+      I wonder how these are linked.
   active: 1
   invSpr:
   - {fileID: 21300000, guid: 4062e2273e58de84ab0ad9bf0a22939b, type: 3}
