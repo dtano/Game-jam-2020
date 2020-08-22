@@ -14,11 +14,14 @@ public class LinkControl : MonoBehaviour
     Button[] selectedItems;
     public LinkStore linkStorage;
 
-    private LinkArray[] links;
+    
+    private List<LinkArray> links;
     
     // Which link the firstItem belongs to
     private int linkIndex;
     // Start is called before the first frame update
+
+    public DialogueManager dialogueManager;
     void Start()
     {
         links = linkStorage.GetLinks();
@@ -41,27 +44,29 @@ public class LinkControl : MonoBehaviour
         if(firstItem == null){
             firstItem = item;
             Debug.Log(firstItem);
-            for(int i = 0; i < links.Length; i++){
-                if(links[i].find(item)){
-                    selectedItems = new Button[links[i].Length() - 1];
-                    linkIndex = i;
-                    Debug.Log("Link has been found, length of available selected items is " + selectedItems.Length);
+            int index = 0;
+            foreach(LinkArray link in links){
+                if(link.find(item)){
+                    selectedItems = new Button[link.Length() - 1];
+                    linkIndex = index;
                     return true;
+
                 }
+                index++;
             }
             Debug.Log("Link somehow not found");
             reset();
         }else if(firstItem != null && selectedItems != null){
             Debug.Log("Time to check the other selected items");
-            if(links[linkIndex].find(item)){
+            if(links.ElementAt(linkIndex)){
                 if(selectedItems.Length == 1){
                     selectedItems[0] = item;
-                    //item.interactable = false;
                     // true link
-                    // Remove the items from the board
                     // Play dialogue
                     // How do we access the dialogue damn it
                     // Ah get the dialogue associated with this link, save it in the Link object
+                    
+                    dialogueManager.StartDialogue(links[linkIndex].dialogue);
                     disable();
                     Debug.Log("reset");
                     return true;
@@ -111,6 +116,7 @@ public class LinkControl : MonoBehaviour
         // }
     }
 
+    // 
     void reset(){
         firstItem.interactable = true;
         firstItem = null;
@@ -121,6 +127,7 @@ public class LinkControl : MonoBehaviour
         selectedItems = null;
     }
 
+    // Disables the true links
     void disable(){
         firstItem.interactable = false;
         firstItem.GetComponent<BoxCollider2D>().enabled = false;

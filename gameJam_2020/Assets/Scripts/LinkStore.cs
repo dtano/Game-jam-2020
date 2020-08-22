@@ -7,13 +7,12 @@ using UnityEngine.UI;
 
 public class LinkStore : MonoBehaviour
 {
-    public Dictionary<Button, Button> links;
 
     // [System.Serializable]
     // public struct buttonStruct {
     //     [SerializeField] public Button[] buttons;
     // }
-    public LinkArray[] listOfLinks;
+    public List<LinkArray> listOfLinks;
     //public buttonStruct[] listOfLinks;
     // Start is called before the first frame update
     void Start()
@@ -30,11 +29,13 @@ public class LinkStore : MonoBehaviour
         
     }
 
-    public LinkArray[] GetLinks(){
+
+    public List<LinkArray> GetLinks(){
         return listOfLinks;
     }
 
+    
     public int length(){
-        return listOfLinks.Length;
+        return listOfLinks.Count;
     }
 }

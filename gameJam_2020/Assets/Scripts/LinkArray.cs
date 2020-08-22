@@ -6,17 +6,20 @@ using System;
 
 [System.Serializable]
 public class LinkArray : MonoBehaviour
-{
-    public Button[] links;
+{   
+    public List<Button> links;
+    public Dialogue dialogue;
     
+    
+
     public int Length(){
-        return links.Length;
+        return links.Count;
     }
 
+
     public bool find(Button item){
-        for(int i = 0; i < links.Length; i++){
-            Debug.Log(links[i]);
-            if(Array.Exists(links, element => element == item)){
+        foreach(Button button in links){
+            if(links.Contains(item)){
                 return true;
             }
         }

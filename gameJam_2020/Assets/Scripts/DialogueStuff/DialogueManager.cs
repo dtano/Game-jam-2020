@@ -27,8 +27,10 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Text box started");
 
+        if(GameObject.Find("Player")){
+            GameObject.Find("Player").GetComponent<playerMovement>().stop();
+        }
         
-        GameObject.Find("Player").GetComponent<playerMovement>().stop();
         
         animator.SetBool("IsOpen", true);
         Debug.Log("Animator is set to true");
@@ -73,7 +75,9 @@ public class DialogueManager : MonoBehaviour
     {
         
         animator.SetBool("IsOpen", false);
-        GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
+        if(GameObject.Find("Player")){
+            GameObject.Find("Player").GetComponent<playerMovement>().enabled = true;
+        }
     
     }
 
