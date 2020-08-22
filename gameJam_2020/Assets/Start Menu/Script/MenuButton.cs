@@ -10,7 +10,7 @@ public class MenuButton : MonoBehaviour
 	[SerializeField] int thisIndex;
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 		if(menuButtonController.index == thisIndex)
 		{
