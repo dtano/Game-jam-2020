@@ -107,7 +107,7 @@ public class LinkControl : MonoBehaviour
 
         if(selectedItems != null){
             for(int i = 0; i< selectedItems.Length; i++){
-                if(selectedItems[i].transform.parent == page){
+                if(selectedItems[i] != null && selectedItems[i].transform.parent == page){
                     selectedItems[i].interactable = false;
                 }
             }
@@ -147,7 +147,7 @@ public class LinkControl : MonoBehaviour
     IEnumerator playDialogue(Dialogue dialogue){
         Debug.Log("function called");
         dialogueManager.StartDialogue(dialogue);
-        GameObject.Find("Background").GetComponent<ControlButtons>().disableButtons();
+        GameObject.Find("Background").GetComponent<ControlButtons>().disableButtons(firstItem);
         while(dialogueManager.animator.GetBool("IsOpen") == true){
             yield return null;
         }

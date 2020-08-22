@@ -18,9 +18,14 @@ public class ControlButtons : MonoBehaviour
         
     }
 
-    public void disableButtons(){
+    public void disableButtons(Button exemptButton){
+        exemptButton.interactable = false;
         for(int i = 0; i < buttons.Length; i++){
-            buttons[i].GetComponent<Button>().enabled = false;
+            if(buttons[i] != exemptButton){
+                buttons[i].GetComponent<Button>().enabled = false;
+            }
+            //buttons[i].GetComponent<Button>().enabled = false;
+            
         }
     }
 
