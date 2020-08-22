@@ -10,6 +10,8 @@ TagManager:
   - Item Adder
   - Main Board
   - Additional Board
+  - Double Link
+  - Triple Link
   layers:
   - Default
   - TransparentFX
