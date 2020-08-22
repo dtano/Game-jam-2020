@@ -8,6 +8,8 @@ TagManager:
   - Interactable
   - Removeable
   - Item Adder
+  - Main Board
+  - Additional Board
   layers:
   - Default
   - TransparentFX
