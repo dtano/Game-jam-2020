@@ -376,7 +376,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - IKEA
+    - I should get a new chair, don't have anywhere to sit.
 --- !u!114 &81596538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +582,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - ahh shitty view
+    - Man, I wished I had the same view as the Professor's office, you could see
+      everything from there.
 --- !u!114 &208350155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2577,7 +2578,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - time to solve this
+    - Time to get cracking!
 --- !u!1 &995782528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,7 +2919,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Got a mystery to solve
+    - Got a mystery to solve! Can't leave yet, the Professor is counting on me
 --- !u!114 &1068393306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,7 +4093,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 37b1b6cba12ac3d4b963502df9c41cf3, type: 3}
     m_FontSize: 30
     m_FontStyle: 3
     m_BestFit: 0
@@ -4292,7 +4293,27 @@ MonoBehaviour:
   openingDialogue:
     name: 
     sentences:
-    - Henlo
+    - "Gabriel: Hey George, what are you doing?\r"
+    - "George: Nothing much, I was going to meet the professor just now, but when
+      I arrived he wasn\u2019t there.\r"
+    - "Gabriel: What happened, did he have to go somewhere?\r"
+    - "George: I\u2019m not sure myself, he left me a letter saying that there are
+      people after him.\r\n"
+    - "Gabriel: What! Why would someone be after the professor?\r"
+    - "George: That\u2019s what I\u2019m trying to figure out as well.\r"
+    - 'Gabriel: Do you need some help?
+
+'
+    - "George: Yea, I\u2019ll might need some help later on.\r\n"
+    - 'Gabriel: Hey, what happened to your chair?
+
+'
+    - 'George: Oh, it broke, I should probably get a new one.
+
+'
+    - 'You may explore the room, click on the BOARD when above the desk to CONTINUE.
+
+'
 --- !u!1 &1828242213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4657,7 +4678,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Is a my bed
+    - Can't go to sleep now, got a mystery to solve.
 --- !u!61 &1907452159
 BoxCollider2D:
   m_ObjectHideFlags: 0
