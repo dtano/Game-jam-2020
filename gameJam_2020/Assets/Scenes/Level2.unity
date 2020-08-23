@@ -2933,7 +2933,6 @@ MonoBehaviour:
       look like items used to make a homemade bomb, what did these people need with
       a bomb
 
-
 '
 --- !u!1 &761732755
 GameObject:
@@ -3638,8 +3637,8 @@ MonoBehaviour:
   dialogue:
     name: George
     sentences:
-    - "It seems that Mr. \u201CBears\u201D was the mastermind behind obtaining the
-      blueprint and staging the attack on San Minuto Central\n\n"
+    - "According to what the informant said, It seems that Mr. \u201CBears\u201D
+      is the mastermind in this organisation. Why would they need gardening supplies?"
 --- !u!1 &1026442816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,57 +3717,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026442816}
   m_CullTransparentMesh: 0
---- !u!1 &1127238462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1127238464}
-  - component: {fileID: 1127238463}
-  m_Layer: 0
-  m_Name: Link(journal1-flyer-fakeid) ?Maybe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1127238463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127238462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72819c7f9c1629f49a4844763c281da2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  links:
-  - {fileID: 1620826683}
-  - {fileID: 1778794522}
-  - {fileID: 1778405321}
-  dialogue:
-    name: George
-    sentences:
-    - Seems like a link to me
---- !u!4 &1127238464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127238462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1149077139}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149077138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,7 +3751,6 @@ Transform:
   - {fileID: 758918183}
   - {fileID: 1010879551}
   - {fileID: 2040957569}
-  - {fileID: 1127238464}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4405,7 +4352,7 @@ MonoBehaviour:
   dialogue:
     name: George
     sentences:
-    - "looks like he was going to interview Whittaker, since he was finalising the
+    - "Looks like he was going to interview Whittaker, since he was finalising the
       interview questions with Whittaker\u2019s secretary."
     - It seems like he used the Fake ID to conceal his real identity, but they found
       out anyway, and now the professor is on the run.
@@ -7348,7 +7295,7 @@ GameObject:
   - component: {fileID: 2040957569}
   - component: {fileID: 2040957568}
   m_Layer: 0
-  m_Name: Link(blueprint-email) ?Needs email button
+  m_Name: Link(blueprint-email)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7370,7 +7317,7 @@ MonoBehaviour:
   - {fileID: 1488432739}
   - {fileID: 516361706}
   dialogue:
-    name: 
+    name: George
     sentences:
     - "Blueprints of San Minuto Central, looks like this was attached to one of the
       emails sent to Mr \u201CBears\u201D. So, Mr. Bears had the blueprint of the
@@ -7428,6 +7375,8 @@ MonoBehaviour:
     sentences:
     - The threat letter says a Kobayashi Maru situation. What kind of no-win situation
       is the professor in? looks like he is in danger and who is this Mr. Bears.
+    - This Mr Bears seems to be in contact with a lot of people, from politicians
+      to police chiefs and judges as well.
 --- !u!4 &2045907767
 Transform:
   m_ObjectHideFlags: 0
@@ -7632,7 +7581,7 @@ MonoBehaviour:
   dialogue:
     name: George
     sentences:
-    - the professor seem to had met an informant about the attack on San Minuto Central,
+    - The professor seem to had met an informant about the attack on San Minuto Central,
       according to the board in the office, it seems like that Candidate Whittaker
       is somehow linked to the attack.
 --- !u!1 &2077725515
