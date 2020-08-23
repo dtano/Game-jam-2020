@@ -60,11 +60,11 @@ public class LinkControl : MonoBehaviour
             levelStart = false;
         }
 
-        if(finalDialogueCleared && levelCleared){
+        if(finalDialogueCleared && !levelCleared){
             // Level cleared
             StopAllCoroutines();
             StartCoroutine(playDialogue(closing));
-            levelCleared = false;
+            levelCleared = true;
             // Transition out of this level
         }
         
@@ -184,7 +184,11 @@ public class LinkControl : MonoBehaviour
 
         GameObject.Find("Background").GetComponent<ControlButtons>().activateButtons();
 
-        if(links.Count - 1 == 0){
+        // if(links.Count - 1 == 0  && dialogueManager.animator.GetBool("IsOpen") == false){
+        //     finalDialogueCleared = true;
+        // }
+
+        if(links.Count == 0 && dialogueManager.animator.GetBool("IsOpen") == false){
             finalDialogueCleared = true;
         }
 
@@ -214,9 +218,9 @@ public class LinkControl : MonoBehaviour
         StartCoroutine(playDialogue(links[linkIndex].dialogue));
         links.Remove(links[linkIndex]);
 
-        if(links.Count == 0 && finalDialogueCleared){
-            levelCleared = true;
-        }
+        // if(links.Count == 0 && finalDialogueCleared){
+        //     levelCleared = true;
+        // }
 
         disable();
     }
