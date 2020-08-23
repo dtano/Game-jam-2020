@@ -13,7 +13,10 @@ public class RoomController : MonoBehaviour
     public Dialogue openingDialogue;
 
     private Vector2 target;
+    
     private bool reached = false;
+    private bool gabrielMove = true;
+
     private float moveSpeed = 2f;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,7 @@ public class RoomController : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(openingDialogue);
         
         gabrielAnimator.SetBool("move", true);
+        //gabrielMove = true;
         
         
     }
@@ -34,14 +38,22 @@ public class RoomController : MonoBehaviour
         if(!reached)
         {
             gabriel.transform.position = Vector2.MoveTowards(gabriel.transform.position, target, Time.deltaTime * moveSpeed);
+            //float direction = target.x - gabriel.transform.position.x;
+            gabrielAnimator.SetBool("move", true);
+            //gabrielAnimator.SetFloat("Horizontal", Mathf.Abs(direction * moveSpeed * Time.deltaTime));
+            
         }
-        
         float distance = (gabriel.transform.position.x - target.x);
         //Debug.Log(distance);
+        
         if(distance <= 2)
-        { 
+        {   
+            gabrielMove = false;
+            //gabrielAnimator.SetFloat("Horizontal", 0);
             gabrielAnimator.SetBool("move", false);
-            target = new Vector2(gabriel.transform.position.x, gabriel.transform.position.y);
+            //gabrielAnimator.SetBool("move", false);
+            //target = new Vector2(gabriel.transform.position.x, gabriel.transform.position.y);
+            reached = true;
             
         }
         Physics2D.IgnoreLayerCollision(8,10);

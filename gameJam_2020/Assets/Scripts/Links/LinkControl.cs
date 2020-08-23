@@ -14,6 +14,8 @@ public class LinkControl : MonoBehaviour
     // Object that holds all the links
     public LinkStore linkStorage;
 
+    public LevelLoader levelLoader;
+
     // The dialogue to be played at the start and the end
     public Dialogue opening;
     public Dialogue closing;
@@ -24,6 +26,7 @@ public class LinkControl : MonoBehaviour
     private bool levelStart = true;
     private bool levelCleared = false;
     private bool finalDialogueCleared = false;
+    private bool closingCleared = false;
 
     // The list of links acquired from the linkStorage
     private List<LinkArray> links;
@@ -66,6 +69,11 @@ public class LinkControl : MonoBehaviour
             StartCoroutine(playDialogue(closing));
             levelCleared = true;
             // Transition out of this level
+        }
+
+        if(closingCleared && levelCleared){
+            levelLoader.GetComponent<LevelLoader>().FadeToLevel();
+            gameObject.GetComponent<GameExit>().QuitGame();
         }
         
     }
@@ -184,12 +192,12 @@ public class LinkControl : MonoBehaviour
 
         GameObject.Find("Background").GetComponent<ControlButtons>().activateButtons();
 
-        // if(links.Count - 1 == 0  && dialogueManager.animator.GetBool("IsOpen") == false){
-        //     finalDialogueCleared = true;
-        // }
-
         if(links.Count == 0 && dialogueManager.animator.GetBool("IsOpen") == false){
             finalDialogueCleared = true;
+        }
+        if(finalDialogueCleared && levelCleared){
+            closingCleared = true;
+            
         }
 
         StopCoroutine(playDialogue(dialogue));
