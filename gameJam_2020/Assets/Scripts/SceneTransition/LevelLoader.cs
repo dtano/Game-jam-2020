@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -17,7 +14,12 @@ public class LevelLoader : MonoBehaviour
         
     }
 
+    public void FadeToLevel(){
+        animator.SetTrigger("FadeOut");
+    }
+
     public void LoadNextLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 }

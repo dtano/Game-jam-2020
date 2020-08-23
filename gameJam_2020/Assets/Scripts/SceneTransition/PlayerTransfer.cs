@@ -40,7 +40,7 @@ public class PlayerTransfer : MonoBehaviour
             // Play door sound effect
 
             // Leaving next level
-            GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadNextLevel();
+            GameObject.Find("LevelLoader").GetComponent<LevelLoader>().FadeToLevel();
     
             
             Debug.Log("Coroutine is now finished");
