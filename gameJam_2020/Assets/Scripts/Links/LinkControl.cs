@@ -73,7 +73,6 @@ public class LinkControl : MonoBehaviour
 
         if(closingCleared && levelCleared){
             levelLoader.GetComponent<LevelLoader>().FadeToLevel();
-            gameObject.GetComponent<GameExit>().QuitGame();
         }
         
     }

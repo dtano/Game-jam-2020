@@ -35,7 +35,7 @@ public class RoomController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!reached)
+        if(!reached && gabrielMove)
         {
             gabriel.transform.position = Vector2.MoveTowards(gabriel.transform.position, target, Time.deltaTime * moveSpeed);
             //float direction = target.x - gabriel.transform.position.x;

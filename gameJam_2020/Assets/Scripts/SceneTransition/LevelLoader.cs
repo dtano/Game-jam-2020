@@ -18,6 +18,10 @@ public class LevelLoader : MonoBehaviour
         animator.SetTrigger("FadeOut");
     }
 
+    public void FadeToQuit(){
+        animator.SetTrigger("Quit");
+    }
+
     public void LoadNextLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
