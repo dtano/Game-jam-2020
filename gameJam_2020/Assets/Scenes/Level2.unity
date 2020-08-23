@@ -3772,7 +3772,7 @@ GameObject:
   - component: {fileID: 1010879551}
   - component: {fileID: 1010879552}
   m_Layer: 0
-  m_Name: Link(VoiceRecorder-article_bombing)
+  m_Name: Link(journal2-voice_recorder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3805,7 +3805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   links:
-  - {fileID: 1495987634}
+  - {fileID: 706518879}
   - {fileID: 740254876}
   dialogue:
     name: George
@@ -7781,7 +7781,7 @@ GameObject:
   - component: {fileID: 2073698065}
   - component: {fileID: 2073698066}
   m_Layer: 0
-  m_Name: Link(journal2-article_whittaker)
+  m_Name: Link(article_bombing-article_whittaker)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7814,14 +7814,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   links:
-  - {fileID: 706518879}
+  - {fileID: 1495987634}
   - {fileID: 181016874}
   dialogue:
     name: George
     sentences:
-    - The professor seem to had met an informant about the attack on San Minuto Central,
-      according to the board in the office, it seems like that Candidate Whittaker
-      is somehow linked to the attack.
+    - It seems like that Candidate Whittaker is somehow linked to the terror attack.
+      Did he make his announcement to gain popularity, or is there an ulterior motive
 --- !u!1 &2077725515
 GameObject:
   m_ObjectHideFlags: 0
