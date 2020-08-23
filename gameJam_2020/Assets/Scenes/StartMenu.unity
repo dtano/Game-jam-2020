@@ -219,7 +219,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 7861471672297606932, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 7861471672297606932, guid: acc57a39b8c015f47aa0ee9dda4d25cd,
         type: 3}
