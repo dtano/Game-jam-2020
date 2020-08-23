@@ -37,7 +37,7 @@ public class RoomController : MonoBehaviour
         }
         
         float distance = (gabriel.transform.position.x - target.x);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         if(distance <= 2)
         { 
             gabrielAnimator.SetBool("move", false);
