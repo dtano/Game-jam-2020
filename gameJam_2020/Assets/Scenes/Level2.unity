@@ -489,7 +489,8 @@ MonoBehaviour:
       \nby clicking on 2 objects)"
   closing:
     name: 
-    sentences: []
+    sentences:
+    - We did it Gabriel! We saved the city!
   failedStatements:
   - name: George
     sentences:
@@ -3523,7 +3524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   links:
   - {fileID: 1495987634}
-  - {fileID: 1474189923}
+  - {fileID: 740254876}
   dialogue:
     name: George
     sentences:
@@ -5435,6 +5436,7 @@ MonoBehaviour:
   - {fileID: 758918184}
   - {fileID: 2045907766}
   - {fileID: 1010879552}
+  - {fileID: 2040957568}
 --- !u!1 &1615026208
 GameObject:
   m_ObjectHideFlags: 0

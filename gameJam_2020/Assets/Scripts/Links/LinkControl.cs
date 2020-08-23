@@ -9,29 +9,35 @@ using System;
 public class LinkControl : MonoBehaviour
 {
     Button firstItem;
-    Button secondItem;
-
     Button[] selectedItems;
+    
+    // Object that holds all the links
     public LinkStore linkStorage;
 
+    // The dialogue to be played at the start and the end
     public Dialogue opening;
     public Dialogue closing;
 
+    // The dialogue to be played when a failed link has been made
     public Dialogue[] failedStatements;
 
     private bool levelStart = true;
     private bool levelCleared = false;
+    private bool finalDialogueCleared = false;
 
-    
+    // The list of links acquired from the linkStorage
     private List<LinkArray> links;
+    
+    // List of already linked objects
     private List<Button> linkedObjects;
+    
+    // Random for getting random error statements
     private System.Random rnd = new System.Random();
     
     // Which link the firstItem belongs to
     private int linkIndex;
-    // Start is called before the first frame update
-
     public DialogueManager dialogueManager;
+    
     void Start()
     {
         links = linkStorage.GetLinks();
@@ -42,8 +48,7 @@ public class LinkControl : MonoBehaviour
         for(int i = 0; i < nextPageDesc.Length; i++){
             nextPageDesc[i].SetActive(false);
         }
-        // StopAllCoroutines();
-        // StartCoroutine(playDialogue(opening));
+
     }
 
     // Update is called once per frame
@@ -54,13 +59,15 @@ public class LinkControl : MonoBehaviour
             StartCoroutine(playDialogue(opening));
             levelStart = false;
         }
-        if(firstItem != null){
-            //Debug.Log(firstItem);
-        }
 
-        if(secondItem != null){
-            //Debug.Log(secondItem);
+        if(finalDialogueCleared && levelCleared){
+            // Level cleared
+            StopAllCoroutines();
+            StartCoroutine(playDialogue(closing));
+            levelCleared = false;
+            // Transition out of this level
         }
+        
     }
 
     // Attaches the button to either the firstItem or the selected items
@@ -83,32 +90,19 @@ public class LinkControl : MonoBehaviour
             reset();
         }else if(firstItem != null && selectedItems != null){
             Debug.Log("Time to check the other selected items");
-            
+            // True link
             if(links.ElementAt(linkIndex).find(item)){
                 if(selectedItems.Length == 1){
                     selectedItems[0] = item;
-                    addToLinkedObjects();
-                    // true link
                     // Play dialogue
-                    // How do we access the dialogue damn it
-                    // Ah get the dialogue associated with this link, save it in the Link object
-                    StopAllCoroutines();
-                    StartCoroutine(playDialogue(links[linkIndex].dialogue));
-                    //dialogueManager.StartDialogue(links[linkIndex].dialogue);
-                    
-                    disable();
+                    success();
                     Debug.Log("reset");
                     return true;
                 }else{
                     for(int i = 0; i < selectedItems.Length; i++){
                         if(i == selectedItems.Length - 1){
                             selectedItems[i] = item;
-                            addToLinkedObjects();
-                            
-                            StopAllCoroutines();
-                            StartCoroutine(playDialogue(links[linkIndex].dialogue));
-                            
-                            disable();
+                            success();
                             // True link
                             // Play dialogue
                             return true;
@@ -121,14 +115,12 @@ public class LinkControl : MonoBehaviour
                         }
                     }
                 }
+                
             }else{
                 // Play failed dialogue
 
                 // Get random failed message
-                int errorIndex = rnd.Next(failedStatements.Length);
-                StopAllCoroutines();
-                StartCoroutine(playDialogue(failedStatements[errorIndex]));
-                reset();
+                failed();
             }
         }
         
@@ -149,12 +141,9 @@ public class LinkControl : MonoBehaviour
             }
         }
 
-        // if(secondItem != null && secondItem.transform.parent == page){
-        //     secondItem.interactable = false;
-        // }
     }
 
-    // 
+    // Resets the first object and selected objects
     void reset(){
         firstItem.interactable = true;
         firstItem = null;
@@ -182,9 +171,6 @@ public class LinkControl : MonoBehaviour
                 selectedItems[i].GetComponent<BoxCollider2D>().enabled = false;
                 selectedItems[i] = null;
             }
-            // selectedItems[i].interactable = false;
-            // selectedItems[i].GetComponent<BoxCollider2D>().enabled = false;
-            // selectedItems[i] = null;
         }
         selectedItems = null;
     }
@@ -198,10 +184,15 @@ public class LinkControl : MonoBehaviour
 
         GameObject.Find("Background").GetComponent<ControlButtons>().activateButtons();
 
+        if(links.Count - 1 == 0){
+            finalDialogueCleared = true;
+        }
+
         StopCoroutine(playDialogue(dialogue));
 
     }
 
+    // Adding linked objects to the list and changing their tags
     void addToLinkedObjects(){
         linkedObjects.Add(firstItem);
         firstItem.transform.gameObject.tag = "Linked";
@@ -215,6 +206,27 @@ public class LinkControl : MonoBehaviour
                 Debug.Log("No change because null");
             }
         }
+    }
+
+    void success(){
+        addToLinkedObjects();
+        StopAllCoroutines();
+        StartCoroutine(playDialogue(links[linkIndex].dialogue));
+        links.Remove(links[linkIndex]);
+
+        if(links.Count == 0 && finalDialogueCleared){
+            levelCleared = true;
+        }
+
+        disable();
+    }
+
+    void failed(){
+         // Get random failed message
+        int errorIndex = rnd.Next(failedStatements.Length);
+        StopAllCoroutines();
+        StartCoroutine(playDialogue(failedStatements[errorIndex]));
+        reset();
     }
 
     
