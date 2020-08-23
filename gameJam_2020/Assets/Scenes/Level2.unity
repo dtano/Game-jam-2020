@@ -7704,8 +7704,8 @@ MonoBehaviour:
   dialogue:
     name: George
     sentences:
-    - It seems like the professor was attending an event for the Candidate Mayor,
-      Leonard Whittaker, why was he there? Was he there to investigate something?
+    - It seems like the professor attended the Whittaker rally, why was he there?
+      Was he there to investigate something?
 --- !u!1 &2058005746
 GameObject:
   m_ObjectHideFlags: 0

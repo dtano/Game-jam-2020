@@ -2334,8 +2334,8 @@ MonoBehaviour:
   closingDialogue:
     name: George
     sentences:
-    - Alright, I that's everything. I should head back to my room and find out what
-      these are and what happened to the professor
+    - Alright, I think that's everything. I should head back to my room and find
+      out what these are and what happened to the professor.
 --- !u!1 &800121349
 GameObject:
   m_ObjectHideFlags: 0
