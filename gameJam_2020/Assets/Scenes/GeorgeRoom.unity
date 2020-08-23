@@ -2154,8 +2154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725739183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.853006, y: 1.0752277, z: 2231.0645}
-  m_LocalScale: {x: 5.167171, y: 5.477434, z: 1}
+  m_LocalPosition: {x: -9.15, y: 0.92, z: 2231.0645}
+  m_LocalScale: {x: 3.7119756, y: 3.3749843, z: 1}
   m_Children: []
   m_Father: {fileID: 1935339538}
   m_RootOrder: 5
@@ -3335,7 +3335,6 @@ GameObject:
   - component: {fileID: 1363069297}
   - component: {fileID: 1363069299}
   - component: {fileID: 1363069301}
-  - component: {fileID: 1363069302}
   - component: {fileID: 1363069300}
   m_Layer: 10
   m_Name: Gabriel
@@ -3475,20 +3474,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31147122, y: 0.91244197}
   m_EdgeRadius: 0
---- !u!114 &1363069302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363069296}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2a4974ac9494b42b99215ec3c0d326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  animator: {fileID: 1363069299}
 --- !u!1 &1363299580
 GameObject:
   m_ObjectHideFlags: 0
